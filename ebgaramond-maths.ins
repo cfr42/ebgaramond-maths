@@ -1,0 +1,103 @@
+%% $Id: ebgaramond-maths.ins 10749 2025-02-02 16:27:05Z cfrees $
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ebgaramond-maths.ins
+%% Additions and changes Copyright (C) 2024-2025 Clea F. Rees.
+%% Code from skeleton.ins Copyright (C) 2015-2024 Scott Pakin (see below).
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3c
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   https://www.latex-project.org/lppl.txt
+%% and version 1.3c or later is part of all distributions of LaTeX
+%% version 2008-05-04 or later.
+%%
+%% This work has the LPPL maintenance status `maintained'.
+%%
+%% The Current Maintainer of this work is Clea F. Rees.
+%%
+%% This work consists of all files listed in manifest.txt.
+%%
+%% The file ebgaramond-maths.ins is a derived work under the terms of the
+%% LPPL. It is based on version 2.4 of skeleton.ins which is part of 
+%% dtxtut by Scott Pakin. A copy of dtxtut, including the 
+%% unmodified version of skeleton.ins is available from
+%% https://www.ctan.org/pkg/dtxtut and released under the LPPL.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input docstrip.tex
+\keepsilent
+
+%% ???
+\usedir{tex/latex/ebgaramond-maths}
+
+\declarepreamble\safonol
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Copyright (C) 2019-2025 Clea F. Rees.
+
+This work may be distributed and/or modified under the
+conditions of the LaTeX Project Public License, either version 1.3c
+of this license or (at your option) any later version.
+The latest version of this license is in
+  https://www.latex-project.org/lppl.txt
+and version 1.3c or later is part of all distributions of LaTeX
+version 2008-05-04 or later.
+
+This work has the LPPL maintenance status `maintained'.
+
+The Current Maintainer of this work is Clea F. Rees.
+
+This file may only be distributed together with a copy of the package
+ebgaramond-maths. You may however distribute the package ebgaramond-maths without
+such generated files.
+
+This work consists of all files listed in manifest.txt.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\endpreamble
+
+% \newcommand* \baseFileName{??}
+% \newcommand* \basePkgName{??}
+% \newcommand* \preChanges{%
+%   - One thing or another.}
+% \newcommand* \targType{The MATH?? }
+
+% \declarepreamble\derpreamble
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Additions and changes Copyright (C) 2019-2025 Clea F. Rees.
+% Code from ??? Copyright (C) ???? AWDUR?? (see below)
+
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3c
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   https://www.latex-project.org/lppl.txt
+% and version 1.3c or later is part of all distributions of LaTeX
+% version 2008-05-04 or later.
+
+% This work has the LPPL maintenance status `maintained'.
+
+% The Current Maintainer of this work is Clea F. Rees.
+
+% This work consists of all files listed in manifest.txt.
+
+% \targType\outFileName is a derived work under the terms of the 
+% LPPL. The original file, \baseFileName, is supplied with \basePkgName. A copy 
+% of \basePkgName including an unmodified copy of \baseFileName is available from
+% https://www.ctan.org/pkg/\basePkgName.
+% The main modifications made to this file are as follows:
+% \preChanges
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \endpreamble
+
+\askonceonly
+
+\usepreamble\safonol
+
+\generate{\file{ebgaramond-maths.sty}{\from{ebgaramond-maths.dtx}{sty}}
+  \file{OMLEBGaramond-Maths.fd}{\from{ebgaramond-maths.dtx}{fd}}
+  % \usepreamble\derpreamble
+  % \file{other.etx}{\from{ebgaramond-maths.dtx}{other}}
+}
+
+
+\endbatchfile

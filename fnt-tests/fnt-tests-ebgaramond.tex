@@ -1,0 +1,80 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+\pdftracingfonts=1
+\RequirePackage{svn-prov}
+\ProvidesFileSVN{$Id: fnt-tests-ebgaramond.tex 10748 2025-02-02 16:14:05Z cfrees $}[v0.0 \revinfo][fnt-tests-ebgaramond]
+\documentclass[10pt,a4paper]{article}
+\usepackage{fonttable}
+\usepackage{tracefnt}% infoshow is default; debugshow traces maths fonts, too
+\usepackage{ebgaramond}
+\usepackage[cmintegrals,cmbraces]{newtxmath}
+
+\makeatletter
+\newcommand\sampler{}
+\def\sampler#1#2#3#4{%
+  % \tracingoutput=1
+  #1 / #2 / #3 / #4 :
+
+  \tracinglostchars\thr@@
+  % \tracingonline\thr@@
+  \showoutput
+  \pikfont{#1}{#2}{#3}{#4}%
+
+  \AZtext
+
+  \aztext
+  
+  abcdefghi
+  pqrstuvwxyz
+  
+  \digitstext 
+  
+
+  $ABCDEFGHIJKLMNOPQRSTUVWXYZ$
+
+  $abcdefghi
+  pqrstuvwxyz$
+
+  $1234567890$
+
+  $\Gamma\varGamma\Delta\Lambda\varLambda\Xi\varXi\Pi\varPi\Sigma\varSigma\Upsilon\varUpsilon\Phi\varPhi\Psi\varPsi\Omega\varOmega$
+
+  $\alpha\beta\gamma\delta\epsilon\varepsilon\zeta\eta\theta\iota\kappa\lambda\mu\nu\xi\pi\rho\varrho\sigma\varsigma\tau\upsilon\phi\varphi\chi\psi\omega$
+
+  $\mathbf{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+
+  $\mathbf{abcdefghi
+  pqrstuvwxyz}$
+
+  $\mathbf{0123456789}$
+
+  $\mathit{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+
+  $\mathit{abcdefghi
+  pqrstuvwxyz}$
+
+  $\mathit{0123456789}$
+
+  $\mathrm{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+
+  $\mathrm{abcdefghi
+  pqrstuvwxyz}$
+
+  $\mathrm{0123456789}$
+
+  $\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+
+  $\mathcal{abcdefghi
+  pqrstuvwxyz}$
+
+  $\mathcal{0123456789}$
+    
+  \vfil\break
+}
+
+
+\makeatother
+
+\endinput
+
+% vim: et:ts=2:sw=2:

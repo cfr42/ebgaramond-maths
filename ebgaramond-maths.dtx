@@ -1,0 +1,502 @@
+% \iffalse meta-comment
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ebgaramond-maths.dtx
+% Additions and changes Copyright (C) 2024-2025 Clea F. Rees.
+% Code from skeleton.dtx Copyright (C) 2015-2024 Scott Pakin (see below).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3c
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   https://www.latex-project.org/lppl.txt
+% and version 1.3c or later is part of all distributions of LaTeX
+% version 2008-05-04 or later.
+%
+% This work has the LPPL maintenance status 'muaintained'.
+%
+% The Current Maintainer of this work is Clea F. Rees.
+%
+% This work consists of all files listed in manifest.txt.
+%
+% The file ebgaramond-maths.dtx is a derived work under the terms of the
+% LPPL. It is based on version 2.4 of skeleton.dtx which is part of
+% dtxtut by Scott Pakin. A copy of dtxtut, including the
+% unmodified version of skeleton.dtx is available from
+% https://www.ctan.org/pkg/dtxtut and released under the LPPL.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \fi
+%
+% \iffalse
+%<*driver>
+\RequirePackage{svn-prov}
+% ref. ateb Max Chernoff: https://tex.stackexchange.com/a/723294/
+\def\MakePrivateLetters{\makeatletter\ExplSyntaxOn\endlinechar13}
+\ExplSyntaxOff
+\ProvidesFileSVN{$Id: ebgaramond-maths.dtx 10749 2025-02-02 16:27:05Z cfrees $}[v0.0 \revinfo][\filename: \filebase]
+\revinfo][\filebase DTX: ]
+\DefineFileInfoSVN[ebgaramond-maths]
+\documentclass[11pt,british]{ltxdoc}
+% l3doc loads fancyvrb
+% fancyvrb overwrites svn-prov's macros without warning
+% restore \fileversion \filerev in case we're using l3doc
+\GetFileInfoSVN{ebgaramond-maths}
+\usepackage[T1]{fontenc}
+\usepackage{upquote}
+\usepackage[sf,scale=0.95,ttscale=.9]{libertine}
+\usepackage[cmintegrals,cmbraces]{newtxmath}
+\usepackage{ebgaramond-maths}
+\makeatletter %^^A am unrhyw reswm, dyw ebgaramond ddim yn diffinio'r rhai hyn
+  \DeclareRobustCommand{\oldstylefam}{\fontfamily{EBGaramond-\ebgaramond@figurealign OsF}\selectfont}
+  \DeclareRobustCommand{\liningfam}{\fontfamily{EBGaramond-\ebgaramond@figurealign LF}\selectfont}
+  \DeclareRobustCommand{\tabularfam}{\fontfamily{EBGaramond-T\ebgaramond@figurestyle}\selectfont}
+  \DeclareRobustCommand{\proportionalfam}{\fontfamily{EBGaramond-\ebgaramond@figurestyle}\selectfont}
+\makeatother
+\EnableCrossrefs
+\CodelineIndex
+\RecordChanges
+% \OnlyDescription
+\DoNotIndex{\verb,\ProvidesPackageSVN,\NeedsTeXFormat,\ProcessKeyOptions}
+\usepackage{babel}
+\usepackage{fancyhdr}
+\usepackage[plain]{fancyref}
+\usepackage{array}
+\usepackage{enumitem}
+\makeatother
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{xurl}
+% \urlstyle{tt}
+\urlstyle{sf}
+\usepackage{microtype}
+\usepackage[a4paper,headheight=14pt,marginparwidth=45mm,hmarginratio=4:1,vscale=.8,hscale=.7,verbose]{geometry}	% use 14pt for 11pt text, 15pt for 12pt text
+% addaswyd o chronos.tex
+\newlength\tewadjust
+\newlength\modiwldoctemplgth
+\AddToHook {begindocument/after}[.]
+{%
+  \setlength\tewadjust{\marginparwidth+\marginparsep-\paperwidth+\textwidth+\oddsidemargin+1in}%
+  \setlength\modiwldoctemplgth{0pt}%
+}
+\usepackage{csquotes}
+\MakeAutoQuote{‘}{’}
+\MakeAutoQuote*{“}{”}
+\usepackage{caption}
+\DeclareCaptionFont{lf}{\lstyle}
+\captionsetup[table]{labelfont=lf}
+% sicrhau hyperindex=false: llwytho CYN bookmark
+\usepackage{hypdoc}% ateb Ulrike Fischer: https://tex.stackexchange.com/a/695555/
+\usepackage{bookmark}
+\hypersetup{%
+  colorlinks=true,
+  citecolor={moss},
+  extension=pdf,
+  linkcolor={strawberry},
+  linktocpage=true,
+  pdfcreator={TeX},
+  pdfproducer={pdfeTeX},
+  urlcolor={blueberry}%
+}
+\NewDocElement[%
+  idxtype=lig.,
+  idxgroup=ligatures,
+  printtype=\textit{lig.},
+]{Lig}{ligature}
+\NewDocElement[%
+  idxtype=sw.,
+  idxgroup=swashes,
+  printtype=\textit{sw.},
+]{Sw}{swash}
+\NewDocElement[%
+  idxtype=pkg.,
+  idxgroup=,
+  printtype=\textit{pkg.},
+]{Pkg}{package}
+\NewDocElement[%
+  idxtype=fd.,
+  idxgroup=fds,
+  printtype=\textit{fd.},
+]{Fd}{fdfile}
+\NewDocElement[%
+  idxtype=drv.,
+  idxgroup=drivers,
+  printtype=\textit{drv.},
+]{Drv}{driver}
+\NewDocElement[%
+  idxtype=map,
+  idxgroup=map files,
+  printtype=\textit{map},
+]{Map}{mapfile}
+\NewDocElement[%
+  idxtype=etx,
+  idxgroup=font encodings,
+  printtype=\textit{etx},
+]{Etx}{encoding}
+\NewDocumentCommand \val { m }
+{%
+  {\ttfamily =\,\meta{#1}}%
+}
+\ExplSyntaxOn
+\NewDocumentCommand \vals { m }
+{
+  {
+    \ttfamily = \, 
+    \clist_use:nn { #1 } { \textbar }
+  }
+} 
+\keys_define:nn { ebgaramond-maths / doc }
+{
+  unknown .code:n = {
+    \cs_if_free:cT { \l_keys_key_str }
+    {
+      \tl_gset:cn { \l_keys_key_str } { #1 }
+    }
+  },
+}
+\NewDocumentCommand \ebgaramond-mathsdocset { +m }
+{
+  \keys_set:nn { ebgaramond-maths / doc } { #1 }
+}
+\ExplSyntaxOff
+\ebgaramond-mathsdocset{%
+  bug={\href{https://codeberg.org/cfr/ebgaramond-maths/issues}{\textsc{bugtracker}}},
+  codeberg={\href{https://codeberg.org/cfr/ebgaramond-maths}{\textsc{codeberg}}},
+  github={\href{https://github.com/cfr42/ebgaramond-maths}{\textsc{github}}},
+  ctan={\href{https://ctan.org/}{\textsc{ctan}}},
+}
+% \usepackage{cleveref}
+\newcommand*{\gust}{\textsc{Gust}}
+\newcommand*{\lpack}[1]{\textsf{#1}}
+\newcommand*{\fgroup}[1]{\textsf{#1}}
+\newcommand*{\fname}[1]{\textsf{#1}}
+\newcommand*{\file}[1]{\texttt{#1}}
+\title{\filebase}
+\author{Clea F. Rees\thanks{%
+    Bug tracker:
+    \href{https://codeberg.org/cfr/ebgaramond-maths/issues}{\url{codeberg.org/cfr/ebgaramond-maths/issues}}
+    \textbar{} Code:
+    \href{https://codeberg.org/cfr/ebgaramond-maths}{\url{codeberg.org/cfr/ebgaramond-maths}}
+    \textbar{} Mirror:
+    \href{https://github.com/cfr42/ebgaramond-maths}{\url{github.com/cfr42/ebgaramond-maths}}% 
+}}
+% \date{\fileversion~\filetoday}
+\date{\fileversion~\filedate}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhf[lh]{\itshape\filebase}
+% ^^A \fancyhf[rh]{\itshape\filetoday}
+\fancyhf[rh]{\itshape\fileversion}
+% ^^A \fancyhf[ch]{\itshape Support for Latin Modern}
+% ^^A\fancyhf[lf]{\itshape\fileversion}
+\fancyhf[cf]{\itshape--- \thepage~/~\lastpage{} ---}
+\ExplSyntaxOn
+\hook_gput_code:nnn {shipout/lastpage} {.}
+{
+  \property_record:nn {t:lastpage}{abspage,page,pagenum}
+}
+\cs_new_protected_nopar:Npn \lastpage 
+{
+  \property_ref:nn {t:lastpage}{page}
+}
+\cs_new_eq:NN \OrigMakePrivateLetters \MakePrivateLetters
+\ExplSyntaxOff
+\definecolor{strawberry}{rgb}{1.000,0.000,0.502}
+\definecolor{blueberry}{rgb}{0.000,0.000,1.000}
+\definecolor{moss}{rgb}{0.000,0.502,0.251}
+\begin{document}
+\let\MakePrivateLetters\MyMakePrivateLetters
+\DocInput{\filename}
+\end{document}
+%</driver>
+% \fi
+%
+% \changes{v1.0}{???}{First public release.}
+% ^^A lua will replace v0.0 and 0000/00/00 when tagging
+% \changes{v1.3}{2025/02/02}{Update for changes to type1 fonts.
+%   Switch to docstrip.}
+% 
+% \maketitle\thispagestyle{empty}
+% \pdfinfo{%
+% 	/Creator		(TeX)
+% 	/Producer		(pdfTeX)
+% 	/Author			(Clea F. Rees)
+% 	/Title			(ebgaramond-maths)
+% 	/Subject		(TeX)
+% 	/Keywords		(TeX, LaTeX, font, fonts, tex, latex, ebgaramond-maths, EBGaramond, ebgaramond, EBGaramond, maths, mathematics, Clea, Rees)}
+% \pdfcatalog{%
+% 	/URL				()
+% 	/PageMode	/UseOutlines}	
+% \setlength{\parindent}{0pt}
+% \setlength{\parskip}{0.5em}
+% 
+% \begin{abstract}
+%   \liningfam
+%   \noindent\lpack{ebgaramond-maths} provides some \LaTeX\ support for the use of EBGaramond in mathematics.
+%   It requires \lpack{ebgaramond} and uses the postscript fonts provided by that package\footnote{This version corresponds to the 2019--05--04 version of \lpack{ebgaramond}.}.
+%   The package essentially consists of the files generated by an answer to a question at \url{http://tex.stackexchange.com/q/152038/} and is a response to a follow-up request by the author of that question.
+% \end{abstract}
+%
+% \tableofcontents
+% \section{Introduction}\label{sec:intro}
+% ^^A BEGIN sec:intro
+% There is not really much to document.
+% To use EBGaramond in mathematics, you just load the package:
+% \begin{quote}
+% \iffalse
+%<*verb>
+% \fi
+\begin{verbatim}
+\usepackage[cmintegrals,cmbraces]{newtxmath}
+\usepackage{ebgaramond-maths}
+\end{verbatim}
+% \iffalse
+%</verb>
+% \fi
+% \end{quote}
+% Note that this will also load \lpack{ebgaramond} which will set your default serif font to \liningnums{EBGaramond}.
+% If for any reason you do not want this, note two things.
+% First, your document will be a typographic abomination.
+% Second, you can easily create the abomination of your choice by changing the default serif family \emph{after} loading \lpack{ebgaramond-maths}.
+% ^^A END sec:intro
+% 
+% \section{Details}\label{sec:manylion}
+% ^^A  BEGIN sec:manylion
+% 
+% The package includes \verb|.tfm| and \verb|.map| files which define EBGaramond-Maths, a new \TeX\ font for \LaTeX.
+% This font uses \liningnums{EBGaramond-Italic} with an OML encoding.
+% However, not all characters in this encoding are available (see \fref{tab:dim}).
+% Note that this is a limitation of the font itself and not of this package.
+% 
+% \begin{table}
+%   \centering
+%   \caption{Symbols missing from EBGaramond}\label{tab:dim}
+%   \begin{tabular}{llll}
+% 	\toprule
+% 	\string\leftharpoonup & \string\triangleright & \string\flat & \string\smile\\
+% 	\string\leftharpoondown & \string\triangleleft &  \string\natural & \string\frown\\
+% 	\string\rightharpoonup & \string\star & \string\sharp & \string\vec\\
+% 	\string\rightharpoondown & \string\partial & & \string\t\\
+% 	\bottomrule
+%   \end{tabular}
+% \end{table}
+% 
+% 
+% \lpack{ebgaramond-maths} uses this new font together with support files from \lpack{ebgaramond} to set up support for mathematics as follows:
+% \begin{itemize}
+%   \item EBGaramond-Maths (medium weight) is used for \verb|letters| (standard and bold);
+%   \item EBGaramond-LF (medium weight, upright shape) is used for \verb|operators| (standard and bold);
+%   \item EBGaramond-LF (medium weight, swash shape) is used for the calligraphic alphabet, \verb|\mathcal| (medium weight);
+%   \item \verb|\mathrm|, \verb|\mathbf| and \verb|\mathit| should work as expected and use EBGaramond-LF (medium weight, upright or italic shape as appropriate).
+% \end{itemize}
+% 
+% Note that \liningnums{EBGaramond} does not include a bold weight by design.
+% Following the designer's intentions, this package, like \lpack{ebgaramond}, substitutes the medium weight for bold where required.
+% ^^A  END sec:manylion
+% 
+% \section{Method}\label{sec:dull}
+% ^^A  BEGIN sec:dull
+% 
+% If you just wish to use the package, you do not need to read this section.
+% It explains how to create the font support files used by the package given that you have \lpack{ebgaramond} installed.
+% It assumes that you are using TeX Live on GNU/Linux or another Unix-like system such as OS X.
+% 
+% \subsection{Variables}\label{subsec:var}
+% ^^A  BEGIN subsec:var
+% Make a working directory somewhere which I'll call \verb|${work}|.
+% The only requirement is that you have permission to write there and a (very small) amount of space.
+% (It goes without saying that this should not be done as root.)
+% 
+% In the instructions which follow \verb|${texmain}| is your main, current \verb|texmf| directory.
+% On my system, that's \verb|/usr/local/texlive/YYYY| (where \verb|YYYY| is the latest version of TeX Live installed) or \verb|/usr/local/texlive/current|.
+% ^^A  END subsec:var
+% 
+% \subsection{Working environment}\label{subsec:amgylchedd}
+% 
+% ^^A  BEGIN subsec:amgylchedd
+% Change to \verb|${work}|.
+% From now on, I assume that all commands are executed in this directory and that all created files are saved there.
+% 
+% Create the following symbolic links in your working directory\footnote{%^^A
+%   On Windows, you will need to copy the file instead.%^^A
+% }:
+% 
+% \begin{quote}
+% \iffalse
+%<*verb>
+% \fi
+\begin{verbatim}
+ln -s ${texmain}/texmf-dist/tex/fontinst/mathetx/oml.etx \
+  ${texmain}/texmf-dist/fonts/opentype/public/ebgaramond/\
+  EBGaramond-Italic.otf ./
+\end{verbatim}
+% \iffalse
+%</verb>
+% \fi
+% \end{quote}
+% ^^A  END subsec:amgylchedd
+% 
+% \subsection{Create a preliminary encoding file}\label{subsec:creu-enc}
+% ^^A  BEGIN subsec: creu-enc
+% This is not the encoding file \TeX\ needs but it will form the basis for that file.
+% 
+% First, run \verb|fontinst| in interactive mode.
+% (That is, just type \verb|fontinst| at the command.)
+% At the prompt:
+% \begin{quote}
+% \iffalse
+%<*verb>
+% \fi
+\begin{verbatim}
+\input finstmsc.sty
+\etxtoenc{oml}{oml-ebgaramond}
+\bye
+\end{verbatim}
+% \iffalse
+%</verb>
+% \fi
+% \end{quote}
+% 
+% This will produce \verb|oml-ebgaramond.enc| which should be lightly modified before feeding to \verb|otftotfm|\footnote{%^^A
+%   On Windows, you will need to substitute an equivalent command or edit the file by hand.%^^A
+% }:
+% 
+% \begin{quote}
+% \iffalse
+%<*verb>
+% \fi
+\begin{verbatim}
+sed -i -e 's/TeXMathItalicEncoding/\
+  EBGaramondTeXMathItalicEncoding/g' \
+  -e 's/oldstyle//' oml-ebgaramond.enc
+\end{verbatim}
+% \iffalse
+%</verb>
+% \fi
+% \end{quote}
+% 
+% This ensures that the encoding has a distinctive (and hopefully unique) name.
+% ^^A  END subsec: creu-enc
+% 
+% \subsection{Generate the \TeX\ font}\label{subsec:tfm}
+% ^^A  BEGIN subsec:tfm
+% \lpack{ebgaramond} already provides the \liningnums{type1} files needed so there is no need to regenerate those.
+% All that is required is to generate a suitable \verb|.tfm|:
+% 
+% \begin{quote}
+% \iffalse
+%<*verb>
+% \fi
+\begin{verbatim}
+otftotfm -e oml-ebgaramond.enc EBGaramond-Italic.otf \
+  > EBGaramond-Maths.map
+\end{verbatim}
+% \iffalse
+%</verb>
+% \fi
+% \end{quote}
+% 
+% This will create both the \verb|.tfm| file and the \verb|.map| file fragment \TeX\ needs to use the font.
+% It will also create a new encoding file with what will almost certainly be a very weird name.
+% This is the encoding file \TeX\ will use, as specified in the \verb|.map| file fragment.
+% The temporary encoding \verb|oml-ebgaramond.enc| can now be deleted as it is no longer required.
+% ^^A  END subsec:tfm
+% 
+% ^^A  END sec:dull
+% 
+% \MaybeStop{%
+% \PrintChanges
+% \PrintIndex
+% }
+% 
+% \section{Implementation}
+%
+% You do not need to read the remainder of this document in order to install or use the package.
+%
+% \iffalse
+%<*sty>
+% \fi
+%    \begin{macrocode}
+\NeedsTeXFormat{LaTeX2e}
+\RequirePackage{svn-prov}
+\ProvidesPackageSVN[\filebase.sty]{$Id: ebgaramond-maths.dtx 10749 2025-02-02 16:27:05Z cfrees $}[v1.3 \revinfo]
+\DefineFileInfoSVN
+%    \end{macrocode}
+% \iffalse
+% ^^A Paid â defnyddio \GetFileInfoSVN*/\GetFileInfoSVN{} yn y fan hon!!
+% \fi
+%    \begin{macrocode}
+
+\RequirePackage{ebgaramond}
+
+\DeclareSymbolFont{letters}   {OML}   {EBGaramond-Maths} {m} {it}
+\DeclareSymbolFont{operators} {OT1}   {EBGaramond-LF}    {m} {n}
+
+\SetSymbolFont{letters}   {bold}  {OML} {EBGaramond-Maths} {b}  {it}
+\SetSymbolFont{operators} {bold}  {OT1} {EBGaramond-LF}    {bx} {n}
+
+\DeclareFontSubstitution{OML}{EBGaramond-Maths}{m}{it}
+\DeclareFontSubstitution{OT1}{EBGaramond-LF}{m}{n}
+
+\SetMathAlphabet{\mathbf}   {normal}  {OT1} {EBGaramond-LF} {bx} {n}
+\SetMathAlphabet{\mathbf}   {bold}    {OT1} {EBGaramond-LF} {bx} {n}
+\SetMathAlphabet{\mathit}   {normal}  {OT1} {EBGaramond-LF} {m}  {it}
+\SetMathAlphabet{\mathit}   {bold}    {OT1} {EBGaramond-LF} {bx} {it}
+
+\DeclareMathAlphabet{\mathcal} {OT1} {EBGaramond-LF} {m} {sw}
+
+%^^A The following symbols are missing and should give errors
+
+\gdef\ebgaramond@maths@help{%^^A
+  EBGaramond does not provide this symbol.\MessageBreak
+  If you are using the recommended setup with newtxmath\MessageBreak
+  you can use \string\re@DeclareMathSymbol{}{}{}{} to take it from another font.\MessageBreak
+  For example, to take symbols from Computer Modern:\MessageBreak
+  \expandafter\noexpand\string\DeclareSymbolFont{cmletters}{OML}{cmm} {m}{it}\MessageBreak
+  Then a specific symbol, such as \string\leftharpoonup, can be defined as follows:\MessageBreak
+  \expandafter\noexpand\string\re@DeclareMathSymbol{\string\leftharpoonup}{\mathrel}{cmletters}{"28}}
+
+%^^A Warning based on David Carlisle's answer at http://tex.stackexchange.com/a/214524/
+\newcommand*{\ebgaramond@maths@dim}{\leftharpoonup,\leftharpoondown,\rightharpoonup,\rightharpoondown,\triangleright,\triangleleft,\star,\partial,\flat,\natural,\sharp,\smile,\frown,\vec,\t}
+\@for \xx:=\ebgaramond@maths@dim \do {%^^A
+  \expandafter\edef\xx{\noexpand\PackageError{ebgaramond-maths}{No \expandafter\string\xx}{\ebgaramond@maths@help}}}
+
+%    \end{macrocode}
+% \iffalse
+%</sty>
+% \fi
+% 
+% \subsection{Font Definitions}\label{subsec:fds}
+% 
+% \iffalse
+%<*fd>
+% \fi
+%    \begin{macrocode}
+%^^A Filename: OMLEBGaramond-Maths.fd
+%% Based on a file created using fontinst v1.928
+
+%% THIS FILE SHOULD BE PUT IN A TEX INPUTS DIRECTORY
+
+\ProvidesFileSVN{$Id: ebgaramond-maths.dtx 10749 2025-02-02 16:27:05Z cfrees $}[v1.3 \revinfo][OMLEBGaramond-Maths.fd: font definitions for OML/EBGaramond-Maths.]
+
+\DeclareFontFamily{OML}{EBGaramond-Maths}{}
+
+\DeclareFontShape{OML}{EBGaramond-Maths}{m}{it}{
+	<-> EBGaramond-Italic--oml-ebgaramond
+	}{}
+
+\DeclareFontShape{OML}{EBGaramond-Maths}{b}{it}{<->ssub * EBGaramond-Maths/m/it}{}
+\DeclareFontShape{OML}{EBGaramond-Maths}{bx}{it}{<->ssub * EBGaramond-Maths/m/it}{}
+
+%    \end{macrocode}
+% \iffalse
+%</fd>
+% \fi
+% \subsection{Other}
+% \iffalse
+%<*other>
+% \fi
+%    \begin{macrocode}
+%    \end{macrocode}
+% \iffalse
+%</other>
+% \fi
+%\Finale
