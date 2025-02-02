@@ -32,7 +32,8 @@ Please report issues on Codeberg as explained below.**
 
 Version 1.2 is updated to use the 2019-05-04 version of ebgaramond.
 
-Version 1.3 is updated to use the version of ebgaramond.
+Version 1.3 is updated to use the 2024-04-23 version of ebgaramond which uses
+the 2017 version 1.001 of EBGaramond12 by Georg Duffner and Octavio Pardo.
 
 ## Consequences
 
@@ -57,4 +58,5 @@ Version 1.3
 2025-02-02
 
 =================================================
+
 vim: et:tw=80:sw=2:
