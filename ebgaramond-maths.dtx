@@ -1,7 +1,7 @@
 % \iffalse meta-comment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ebgaramond-maths.dtx
-% Additions and changes Copyright (C) 2024-2025 Clea F. Rees.
+% Additions and changes Copyright (C) 2014-2025 Clea F. Rees.
 % Code from skeleton.dtx Copyright (C) 2015-2024 Scott Pakin (see below).
 %
 % This work may be distributed and/or modified under the
@@ -32,7 +32,7 @@
 % ref. ateb Max Chernoff: https://tex.stackexchange.com/a/723294/
 \def\MakePrivateLetters{\makeatletter\ExplSyntaxOn\endlinechar13}
 \ExplSyntaxOff
-\ProvidesFileSVN{$Id: ebgaramond-maths.dtx 10749 2025-02-02 16:27:05Z cfrees $}[v0.0 \revinfo][\filename: \filebase]
+\ProvidesFileSVN{$Id: ebgaramond-maths.dtx 10780 2025-02-07 08:15:26Z cfrees $}[v0.0 \revinfo][\filename: \filebase]
 \revinfo][\filebase DTX: ]
 \DefineFileInfoSVN[ebgaramond-maths]
 \documentclass[11pt,british]{ltxdoc}
@@ -414,10 +414,11 @@ otftotfm -e oml-ebgaramond.enc EBGaramond-Italic.otf \
 % \iffalse
 %<*sty>
 % \fi
+% \changes{v0.0}{2025-02-06}{Support for bold. Follow \texttt{ebgaramond} series settings.}
 %    \begin{macrocode}
 \NeedsTeXFormat{LaTeX2e}
 \RequirePackage{svn-prov}
-\ProvidesPackageSVN[\filebase.sty]{$Id: ebgaramond-maths.dtx 10749 2025-02-02 16:27:05Z cfrees $}[v1.3 \revinfo]
+\ProvidesPackageSVN[\filebase.sty]{$Id: ebgaramond-maths.dtx 10780 2025-02-07 08:15:26Z cfrees $}[v1.3 \revinfo]
 \DefineFileInfoSVN
 %    \end{macrocode}
 % \iffalse
@@ -427,21 +428,22 @@ otftotfm -e oml-ebgaramond.enc EBGaramond-Italic.otf \
 
 \RequirePackage{ebgaramond}
 
-\DeclareSymbolFont{letters}   {OML}   {EBGaramond-Maths} {m} {it}
-\DeclareSymbolFont{operators} {OT1}   {EBGaramond-LF}    {m} {n}
+\DeclareSymbolFont{letters}   {OML}   {EBGaramond-Maths} {\mdseries@rm} {it}
+\DeclareSymbolFont{operators} {OT1}   {EBGaramond-LF}    {\mdseries@rm} {n}
 
-\SetSymbolFont{letters}   {bold}  {OML} {EBGaramond-Maths} {b}  {it}
-\SetSymbolFont{operators} {bold}  {OT1} {EBGaramond-LF}    {bx} {n}
+\SetSymbolFont{letters}   {bold}  {OML} {EBGaramond-Maths} {\bfseries@rm} {it}
+\SetSymbolFont{operators} {bold}  {OT1} {EBGaramond-LF}    {\bfseries@rm} {n}
 
-\DeclareFontSubstitution{OML}{EBGaramond-Maths}{m}{it}
-\DeclareFontSubstitution{OT1}{EBGaramond-LF}{m}{n}
+\DeclareFontSubstitution{OML}{EBGaramond-Maths}{\mdseries@rm}{it}
+\DeclareFontSubstitution{OT1}{EBGaramond-LF}{\mdseries@rm}{n}
 
-\SetMathAlphabet{\mathbf}   {normal}  {OT1} {EBGaramond-LF} {bx} {n}
-\SetMathAlphabet{\mathbf}   {bold}    {OT1} {EBGaramond-LF} {bx} {n}
-\SetMathAlphabet{\mathit}   {normal}  {OT1} {EBGaramond-LF} {m}  {it}
-\SetMathAlphabet{\mathit}   {bold}    {OT1} {EBGaramond-LF} {bx} {it}
+\SetMathAlphabet{\mathbf}   {normal}  {OT1} {EBGaramond-LF} {\bfseries@rm} {n}
+\SetMathAlphabet{\mathbf}   {bold}    {OT1} {EBGaramond-LF} {\bfseries@rm} {n}
+\SetMathAlphabet{\mathit}   {normal}  {OT1} {EBGaramond-LF} {\mdseries@rm} {it}
+\SetMathAlphabet{\mathit}   {bold}    {OT1} {EBGaramond-LF} {\bfseries@rm} {it}
 
-\DeclareMathAlphabet{\mathcal} {OT1} {EBGaramond-LF} {m} {sw}
+\DeclareMathAlphabet{\mathcal} {OT1} {EBGaramond-LF} {\mdseries@rm} {sw}
+\SetMathAlphabet{\mathcal}  {bold}    {OT1} {EBGaramond-LF} {\bfseries@rm} {sw}
 
 %^^A The following symbols are missing and should give errors
 
@@ -475,28 +477,86 @@ otftotfm -e oml-ebgaramond.enc EBGaramond-Italic.otf \
 
 %% THIS FILE SHOULD BE PUT IN A TEX INPUTS DIRECTORY
 
-\ProvidesFileSVN{$Id: ebgaramond-maths.dtx 10749 2025-02-02 16:27:05Z cfrees $}[v1.3 \revinfo][OMLEBGaramond-Maths.fd: font definitions for OML/EBGaramond-Maths.]
+\ProvidesFileSVN{$Id: ebgaramond-maths.dtx 10780 2025-02-07 08:15:26Z cfrees $}[v1.3 \revinfo][OMLEBGaramond-Maths.fd: font definitions for OML/EBGaramond-Maths.]
 
 \DeclareFontFamily{OML}{EBGaramond-Maths}{}
 
 \DeclareFontShape{OML}{EBGaramond-Maths}{m}{it}{
 	<-> EBGaramond-Italic--oml-ebgaramond
 	}{}
+\DeclareFontShape{OML}{EBGaramond-SemiBoldMaths}{sb}{it}{
+	<-> EBGaramond-SemiBoldItalic--oml-ebgaramond
+	}{}
+\DeclareFontShape{OML}{EBGaramond-BoldMaths}{b}{it}{
+	<-> EBGaramond-BoldItalic--oml-ebgaramond
+	}{}
+\DeclareFontShape{OML}{EBGaramond-ExtraBoldMaths}{eb}{it}{
+	<-> EBGaramond-ExtraBoldItalic--oml-ebgaramond
+	}{}
+\DeclareFontShape{OML}{EBGaramond-MediumMaths}{medium}{it}{
+	<-> EBGaramond-MediumItalic--oml-ebgaramond
+	}{}
 
-\DeclareFontShape{OML}{EBGaramond-Maths}{b}{it}{<->ssub * EBGaramond-Maths/m/it}{}
-\DeclareFontShape{OML}{EBGaramond-Maths}{bx}{it}{<->ssub * EBGaramond-Maths/m/it}{}
+\DeclareFontShape{OML}{EBGaramond-Maths}{bx}{it}{<->ssub * EBGaramond-Maths/b/it}{}
 
 %    \end{macrocode}
 % \iffalse
 %</fd>
 % \fi
-% \subsection{Other}
+% \subsection{Sample}
 % \iffalse
-%<*other>
+%<*ee>
 % \fi
 %    \begin{macrocode}
+\documentclass{article}
+\pdfmapfile{-EBGaramond-Maths}
+\pdfmapfile{+EBGaramond-Maths}
+\usepackage{ebgaramond}
+\usepackage[cmintegrals,cmbraces]{newtxmath}
+\usepackage{ebgaramond-maths}
+
+\begin{document}
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+abcdefghijklmnopqrstuvwxyz
+
+1234567890
+
+$ABCDEFGHIJKLMNOPQRSTUVWXYZ$
+
+$abcdefghijklmnopqrstuvwxyz$
+
+$1234567890$
+
+$\Gamma\varGamma\Delta\Lambda\varLambda\Xi\varXi\Pi\varPi\Sigma\varSigma\Upsilon\varUpsilon\Phi\varPhi\Psi\varPsi\Omega\varOmega$
+
+$\alpha\beta\gamma\delta\epsilon\varepsilon\zeta\eta\theta\iota\kappa\lambda\mu\nu\xi\pi\rho\varrho\sigma\varsigma\tau\upsilon\phi\varphi\chi\psi\omega$
+
+$\mathbf{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+
+$\mathbf{abcdefghijklmnopqrstuvwxyz}$
+
+$\mathbf{0123456789}$
+
+$\mathit{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+
+$\mathit{abcdefghijklmnopqrstuvwxyz}$
+
+$\mathit{0123456789}$
+
+$\mathrm{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+
+$\mathrm{abcdefghijklmnopqrstuvwxyz}$
+
+$\mathrm{0123456789}$
+
+$\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+
+$\mathcal{abcdefghijklmnopqrstuvwxyz}$
+
+$\mathcal{0123456789}$
 %    \end{macrocode}
 % \iffalse
-%</other>
+%</ee>
 % \fi
 %\Finale
