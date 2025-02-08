@@ -12,7 +12,17 @@ ctanpkg = "ebgaramond-maths"
 module = "ebgaramond-maths"
 texmfdir = maindir .. "/texmf"
 require(kpse.lookup("fntbuild.lua"))
-fnt.buildsuppfiles_sys = { "EBGaramond-Italic.otf", "EBGaramond-BoldItalic.otf", "EBGaramond-ExtraBoldItalic.otf", "EBGaramond-MediumItalic.otf", "EBGaramond-SemiBoldItalic.otf" }
+local otftotfm = {}
+otftotfm.otfs = { "EBGaramond-Italic.otf", "EBGaramond-BoldItalic.otf", "EBGaramond-ExtraBoldItalic.otf", "EBGaramond-MediumItalic.otf", "EBGaramond-SemiBoldItalic.otf" }
+otftotfm.encs = "oml-ebgaramond.enc"
+otftotfm.srcencs = { oml = "oml-ebgaramond"  }
+otftotfm.mapfile = "EBGaramond-Maths.map"
+-- we're not using fontinst for the tfms etc., but we want it to create the
+-- input encoding
+fnt.buildsuppfiles_sys =  { "mathit.mtx", "oml.etx" }
+for _,i in ipairs (otftotfm.otfs) do
+  table.insert(fnt.buildsuppfiles_sys, i )
+end
 -- fnt.autotestfds = {  "ly1ybd.fd", "ly1ybd2.fd", "ly1ybd2j.fd", "ly1ybd2jw.fd", "ly1ybd2w.fd", "ly1ybdj.fd", "ly1ybdjw.fd", "ly1ybdw.fd", "t1ybd.fd", "t1ybd2.fd", "t1ybd2j.fd", "t1ybdj.fd" }
 -- fnt.keepfiles = { "ybd.map", "*.afm", "*.pfb", "*.tfm" , "ts1ybd2w.fd", "ts1ybd2jw.fd", "ts1ybdjw.fd", "ts1ybdw.fd" }
 -- fnt.keeptempfiles = { "*.pl" }
@@ -40,13 +50,6 @@ fnt.checksuppfiles_add = {
   -- "/fonts/tfm/public/lm",
   -- "/fonts/type1/public/lm",
   -- "etoolbox.sty",
-  -- "ly1enc.def",
-  -- "ly1enc.dfu",
-  -- "ly1lmr.fd",
-  -- "ly1lmss.fd",
-  -- "ly1lmtt.fd",
-  -- "omllmm.fd",
-  -- "omllmr.fd",
   -- "omslmr.fd",
   -- "omslmsy.fd",
   -- "omxlmex.fd",
@@ -63,12 +66,109 @@ fnt.checksuppfiles_add = {
 }
 -------------------------------------------------
 -- START doc fntebgm
+local function otf2tfm (mapfile,dir,otfs,encs,opts)
+  dir = dir or fnt.fntdir
+  otfs = otfs or otftotfm.otfs or filelist(dir,"*.otf")
+  encs = encs or otftotfm.encs or filelist(dir,"*.enc")
+  opts = opts or otftotfm.opts or ""
+  local t = otfs
+  local tencs = {}
+  local tb = {}
+  tb.encs = encs
+  tb.opts = opts 
+  for n,i in ipairs(otfs) do
+    print(i)
+    otfs[i] = tb 
+    for _,j in ipairs(encs) do
+      tencs[j] = tencs[j] or {}
+      table.insert(tencs[j],i)
+    end
+    t[n] = nil
+    otfs[n] = nil
+  end
+  for a,b in pairs(tencs) do print(a,b) 
+    for i,j in pairs(b) do print(i,j) end
+  end
+  for i,j in pairs(t) do
+    if type(j) ~= "table" then
+      if type(j) == "string" then
+        if string.match(j,"%.enc$") then
+          print("Using default options for " .. i .. ".")
+          otfs[i] = { encs = j, opts = opts }
+          tencs[j] = tencs[j] or {}
+          table.insert(tencs[j],i)
+        else
+          print("Using default encodings for " .. i .. ".")
+          otfs[i] = { encs = encs, opts = j }
+          for _,k in ipairs(encs) do
+            tencs[k] = tencs[k] or {}
+            table.insert(tencs[k],i)
+          end
+        end
+      else
+        error("Expected string or table for " .. i .. " but found " .. type(j) .. "!")
+      end
+    else
+      if j.encs == nil then
+        otfs[i].encs = encs
+        for _,k in ipairs(encs) do
+          tencs[k] = tencs[k] or {}
+          table.insert(tencs[k],i)
+        end
+        print("Using default encodings for " .. i .. ".")
+      else
+        for _,k in ipairs(j.encs) do
+          tencs[k] = tencs[k] or {}
+          table.insert(tencs[k],i)
+        end
+      end
+      if j.opts == nil then
+        otfs[i].opts = opts
+        print("Using default options for " .. i .. ".")
+      end
+    end
+  end
+  local m = ""
+  local n = 0
+  for e,t in pairs(tencs) do
+    n = n + 1
+    for _,i in ipairs(t) do
+      local out = assert(io.popen("otftotfm -e " .. e .. " " .. otfs[i].opts .. " " .. i, r),"otftotfm failed for " .. i .. "/" .. e .. " with options " .. otfs[i].opts .. "!")
+      f = assert(io.input(out, "rb"),"Reading map line failed for " .. i .. "/" .. e .. " with options " .. otfs[i].opts ..  "!")
+      m = m .. f:read("*all")
+      f:close()
+    end
+    assert(rm(dir,e), "Could not remove input encoding " .. e .. "!")
+    local a = filelist(dir,"a_*.enc")
+    local eb = string.gsub(basename(e),"%.enc$","")
+    local eb = string.gsub(eb,"-","_")
+    local en = string.gsub(e,"%.enc","-" .. n .. ".enc")
+    for _,i in ipairs(a) do
+      f = assert(io.open(i, "rb"),"Failed to open " .. i .. "!")
+      content = f:read("*all")
+      f:close()
+      if string.match(content,"AutoEnc_") then
+        new_content = string.gsub(content, "(AutoEnc_)[a-z0-9][a-z0-9]*", "%1" .. eb .. "_" .. n)
+      end
+      f = assert(io.open(en, "w"),"Could not open " .. en .. " for writing!")
+      f:write((string.gsub(new_content,"\n",fnt.os_newline_cp)))
+      f:close()
+      rm(dir, i)
+      if fileexists(i) then
+        print("Warning: Could not remove " .. i "!")
+      end
+      m = string.gsub(m, i, en)
+      m = string.gsub(m, "(AutoEnc_)[a-z0-9][a-z0-9]*", "%1" .. eb .. "_" .. n)
+    end
+  end
+  f = assert(io.open(mapfile, "w"),"Failed to open " .. mapfile .. " for writing!")
+  f:write((string.gsub(m,"\n",fnt.os_newline_cp)))
+  f:close()
+end
 local function fntebgm (dir,mode)
   dir = dir or fnt.fntdir
   mode = mode or "errorstopmode --halt-on-error"
-  local oml = "oml-ebgaramond.enc"
   local tmp = "ete.tex"
-  local mapfile = "EBGaramond-Maths.map"
   -- set up the build environment
   assert(fnt.buildinit(), "Setting up build environment failed!")
   -- save dir and 'home'
@@ -77,58 +177,29 @@ local function fntebgm (dir,mode)
   -- change to build dir
   assert(lfs.chdir(dir), "Could not switch to " .. dir .. "!")
   dir = "."
-  local ete = [[
-  \input finstmsc.sty
-  \etxtoenc{oml}{oml-ebgaramond}
-  \bye
-  ]]
-  local f = assert(io.open(tmp, "w"),"Opening " .. tmp .. " for writing failed!")
-  f:write((string.gsub(ete,"\n",fnt.os_newline_cp)))
-  f:close()
-  assert(run(dir, "fontinst " .. tmp), "Could not create input encoding!")
-  f = assert(io.open(oml, "rb"),"Cannot read " .. oml .. "!")
-  local content = f:read("*all")
-  f:close()
-  local new_content = string.gsub(content, "TeXMathItalicEncoding", "EBGaramondTeXMathItalicEncoding")
-  new_content = string.gsub(new_content, "oldstyle", "")
-  new_content = string.gsub(new_content, "^/mu", "/uni000B5")
-  f = assert(io.open(oml,"w"))
-  f:write((string.gsub(new_content,"\n",fnt.os_newline_cp)))
-  f:close()
-  local m = ""
-  for _,i in ipairs(fnt.buildsuppfiles_sys) do
-    local out = assert(io.popen("otftotfm -e " .. oml .. " " .. i, r),"otftotfm failed for " .. i .. "!")
-    f = assert(io.input(out, "rb"),"Reading map line failed for " .. i .. "!")
-    m = m .. f:read("*all")
-    f:close()
+  if type(otftotfm.encs) == "string" then 
+    otftotfm.encs = { otftotfm.encs } 
   end
-  assert(rm(dir,oml), "Could not remove input encoding!")
-  local encs = filelist(dir,"a_*.enc")
-  local n = 0
-  for _,i in ipairs(encs) do
-    n = n + 1
-    f = assert(io.open(i, "rb"),"Failed to open " .. i .. "!")
-    content = f:read("*all")
+  for i,j in pairs(otftotfm.srcencs) do
+    local ete = "\\input finstmsc.sty" .. fnt.os_newline_cp ..
+    "\\etxtoenc{" .. i .. "}{" .. j .. "}" .. fnt.os_newline_cp ..
+    "\\bye" .. fnt.os_newline_cp
+    local f = assert(io.open(tmp, "w"),"Opening " .. tmp .. " for writing failed!")
+    f:write(ete)
     f:close()
-    if string.match(content,"AutoEnc_") then
-      print("Aardvarks!")
-      new_content = string.gsub(content, "(AutoEnc_)[a-z0-9][a-z0-9]*", "%1EBGaramond_Maths_" .. n)
-    end
-    local a = string.gsub(oml,"%.enc","-" .. n .. ".enc")
-    print(a)
-    f = assert(io.open(a, "w"),"Could not open " .. a .. " for writing!")
+    assert(run(dir, "fontinst " .. tmp), "Could not create input encoding!")
+    j = j .. ".enc"
+    f = assert(io.open(j, "rb"),"Cannot read " .. j .. "!")
+    local content = f:read("*all")
+    f:close()
+    local new_content = string.gsub(content, "TeXMathItalicEncoding", "EBGaramondTeXMathItalicEncoding")
+    new_content = string.gsub(new_content, "oldstyle", "")
+    new_content = string.gsub(new_content, "^/mu", "/uni000B5")
+    f = assert(io.open(j,"w"))
     f:write((string.gsub(new_content,"\n",fnt.os_newline_cp)))
     f:close()
-    rm(dir, i)
-    if fileexists(i) then
-      print("Warning: Could not remove " .. i "!")
-    end
-    m = string.gsub(m, i, a)
-    m = string.gsub(m, "(AutoEnc_)[a-z0-9][a-z0-9]*", "%1EBGaramond_Maths_" .. n)
   end
-  f = assert(io.open(mapfile, "w"),"Failed to open " .. mapfile .. " for writing!")
-  f:write((string.gsub(m,"\n",fnt.os_newline_cp)))
-  f:close()
+  otf2tfm (otftotfm.mapfile,dir,otftotfm.otfs,otftotfm.encs,otftotfm.opts)
   if fileexists(dir .. "/pdftex.map") then rm(dir,"pdftex.map") end
   -- return home
   assert(lfs.chdir(gohome), "Could not switch to " .. gohome .. "!")
