@@ -1,0 +1,132 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+\pdftracingfonts=1
+\RequirePackage{svn-prov}
+\ProvidesFileSVN{$Id: fnt-regression-test-ebgaramond.tex 10806 2025-02-15 07:36:08Z cfrees $}[v0.0 \revinfo][fnt-regression-test-ebgaramond]
+\documentclass[10pt,a4paper]{article}
+\usepackage{fonttable}
+\usepackage{tracefnt}% infoshow is default; debugshow traces maths fonts, too
+\usepackage{ebgaramond-maths}
+\DeclareMathSymbol{\varepsilon}{\mathord}{letters}{34}
+\DeclareMathSymbol{\vartheta}{\mathord}{letters}{35}
+\DeclareMathSymbol{\varpi}{\mathord}{letters}{36}
+\DeclareMathSymbol{\varrho}{\mathord}{letters}{37}
+\DeclareMathSymbol{\varsigma}{\mathord}{letters}{38}
+\DeclareMathSymbol{\varphi}{\mathord}{letters}{39}
+
+\makeatletter
+\newcommand\sampler{}
+\def\sampler#1#2#3#4{%
+  % \tracingoutput=1
+  {%
+    \fontfamily{#2}\fontseries{#3}\fontshape{#4}\selectfont
+    #1 / #2 / #3 / #4 :
+  }
+  \edef\mdseries@rm{#3}%
+
+  \tracinglostchars\thr@@
+  % \tracingonline\thr@@
+  \showoutput
+  \pikfont{OT1}{#2}{#3}{#4}%
+  \OMIT
+  \par
+  \noindent
+  \begin{tabular}{lll}
+    ABC & abc & \digitstext \\
+    \TIMO
+    $ABCDEFGHIJKLMNOPQRSTUVWXYZ$ \OMIT&\TIMO  
+    $abcdefghijklmnopqrstuvwxyz$ \OMIT&\TIMO  
+    $1234567890$ \OMIT\\\TIMO 
+    $\Gamma\varGamma\Delta\Lambda\varLambda\Xi\varXi\Pi\varPi\Sigma\varSigma\Upsilon\varUpsilon\Phi\varPhi\Psi\varPsi\Omega\varOmega$ \OMIT&\TIMO  
+    $\alpha\beta\gamma\delta\epsilon\varepsilon\zeta\eta\theta\iota\kappa\lambda\mu\nu\xi\pi\rho\varrho\sigma\varsigma\tau\upsilon\phi\varphi\chi\psi\omega$ \OMIT\\\TIMO 
+    $\mathbf{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$ \OMIT&\TIMO  
+    $\mathbf{abcdefghijklmnopqrstuvwxyz}$ \OMIT&\TIMO  
+    $\mathbf{0123456789}$ \OMIT\\\TIMO 
+    $\mathit{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$ \OMIT&\TIMO  
+    $\mathit{abcdefghijklmnopqrstuvwxyz}$ \OMIT&\TIMO  
+    $\mathit{0123456789}$ \OMIT\\\TIMO 
+    $\mathrm{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$ \OMIT&\TIMO  
+    $\mathrm{abcdefghijklmnopqrstuvwxyz}$ \OMIT&\TIMO  
+    $\mathrm{0123456789}$ \OMIT\\\TIMO 
+    $\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$ \OMIT&\TIMO  
+    $\mathcal{abcdefghijklmnopqrstuvwxyz}$ \OMIT&\TIMO  
+    $\mathcal{0123456789}$ \OMIT\\
+  \end{tabular}
+  \TIMO
+  \par
+}
+
+\ExplSyntaxOn
+\seq_new:N \l_ebgm_bf_seq
+\seq_new:N \l_ebgm_md_seq
+\seq_set_from_clist:Nn \l_ebgm_bf_seq
+{
+  b,
+  eb,
+  sb,
+}
+\seq_set_from_clist:Nn \l_ebgm_md_seq
+{
+  m,
+  medium,
+}
+\cs_new_protected:Npn \ebgm_test_pairs:
+{
+  \seq_map_inline:Nn \l_ebgm_md_seq
+  {
+    \seq_map_inline:Nn \l_ebgm_bf_seq
+    {
+      {
+        \OMIT
+        \fontencoding{OT1}\fontfamily{EBGaramond}\fontseries{##1}\fontshape{n}\selectfont
+        md ~ is ~ ##1 ~ and ~
+        \fontseries{####1}\selectfont
+        bf ~ is ~ ####1 \par
+        \TIMO
+      }
+      \edef\mdseries@rm{##1}
+      \edef\bfseries@rm{####1}
+      \rmfamily\normalfont\normalsize\upshape 
+      \tracinglostchars\thr@@
+      \par
+      \showoutput
+
+      \mathversion{normal}
+      $ABC\mathbf{D}\mathit{E}\mathrm{F}GHIJKLMNOPQRSTUVWXYZ$\hfill\textbar
+      $abc\mathbf{d}\mathit{e}\mathrm{f}ghijklmnopqrstuvwxyz$\hfill\textbar
+      $12\mathbf{3}\mathit{4}\mathrm{5}67890$
+      \par
+
+      $\Gamma\varGamma\mathbf{\Delta}\Lambda\varLambda\Xi\varXi\Pi\varPi\Sigma\varSigma\Upsilon\varUpsilon\Phi\varPhi\Psi\varPsi\Omega\varOmega$\hfill\textbar
+      $\alpha\beta\gamma\mathbf{\delta}\epsilon\varepsilon\zeta\eta\theta\iota\kappa\lambda\mu\nu\xi\pi\rho\varrho\sigma\varsigma\tau\upsilon\phi\varphi\chi\psi\omega$
+      \par
+
+      $\mathcal{ABCD\mathbf{E}FGHIJKLMNOPQRSTUVWXYZ}$\hfill\textbar
+      $\mathcal{abcd\mathbf{e}fghijklmnopqrstuvwxyz}$\hfill\textbar
+      $\mathcal{012\mathbf{3}456789}$
+      \par
+
+      \mathversion{bold}
+      $ABC\mathbf{D}\mathit{E}\mathrm{F}GHIJKLMNOPQRSTUVWXYZ$\hfill\textbar
+      $abc\mathbf{d}\mathit{e}\mathrm{f}ghijklmnopqrstuvwxyz$\hfill\textbar
+      $12\mathbf{3}\mathit{4}\mathrm{5}67890$
+      \par
+
+      $\Gamma\varGamma\mathbf{\Delta}\Lambda\varLambda\Xi\varXi\Pi\varPi\Sigma\varSigma\Upsilon\varUpsilon\Phi\varPhi\Psi\varPsi\Omega\varOmega$\hfill\textbar
+      $\alpha\beta\gamma\mathbf{\delta}\epsilon\varepsilon\zeta\eta\theta\iota\kappa\lambda\mu\nu\xi\pi\rho\varrho\sigma\varsigma\tau\upsilon\phi\varphi\chi\psi\omega$
+      \par
+
+      $\mathcal{ABCD\mathbf{E}FGHIJKLMNOPQRSTUVWXYZ}$\hfill\textbar
+      $\mathcal{abcd\mathbf{e}fghijklmnopqrstuvwxyz}$\hfill\textbar
+      $\mathcal{012\mathbf{3}456789}$
+      \par
+    }
+  }
+}
+\ExplSyntaxOff
+
+\makeatother
+
+\endinput
+
+% vim: et:ts=2:sw=2:
