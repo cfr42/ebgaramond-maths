@@ -1,4 +1,4 @@
--- $Id: build.lua 10782 2025-02-08 06:37:20Z cfrees $
+-- $Id: build.lua 10806 2025-02-15 07:36:08Z cfrees $
 -------------------------------------------------
 -- Build configuration for ebgaramond-maths
 -------------------------------------------------
@@ -11,73 +11,69 @@ bakext = ".bkup"
 ctanpkg = "ebgaramond-maths"
 module = "ebgaramond-maths"
 texmfdir = maindir .. "/texmf"
+-- angen TEXMFHOME=./texmf (os ni ngosodir fontscripts)
 require(kpse.lookup("fntbuild.lua"))
 local otftotfm = {}
+---@description otfs to convert
 otftotfm.otfs = { "EBGaramond-Italic.otf", "EBGaramond-BoldItalic.otf", "EBGaramond-ExtraBoldItalic.otf", "EBGaramond-MediumItalic.otf", "EBGaramond-SemiBoldItalic.otf" }
+---@description input encs to generate
 otftotfm.encs = "oml-ebgaramond.enc"
+---@description etx to convert
 otftotfm.srcencs = { oml = "oml-ebgaramond"  }
+---@description map file to generate
 otftotfm.mapfile = "EBGaramond-Maths.map"
--- we're not using fontinst for the tfms etc., but we want it to create the
+-- we're not using fontinst for the tfms etc., but we want these to create the
 -- input encoding
-fnt.buildsuppfiles_sys =  { "mathit.mtx", "oml.etx" }
-for _,i in ipairs (otftotfm.otfs) do
-  table.insert(fnt.buildsuppfiles_sys, i )
+-- fnt.buildsuppfiles_sys =  { "mathit.mtx", "oml.etx" }
+-- the otfs we need for sandboxed build are part of dist
+if #fnt.buildsuppfiles_sys == 0 then
+  for _,i in ipairs(otftotfm.otfs) do
+    table.insert(fnt.buildsuppfiles_sys,i)
+  end
 end
--- fnt.autotestfds = {  "ly1ybd.fd", "ly1ybd2.fd", "ly1ybd2j.fd", "ly1ybd2jw.fd", "ly1ybd2w.fd", "ly1ybdj.fd", "ly1ybdjw.fd", "ly1ybdw.fd", "t1ybd.fd", "t1ybd2.fd", "t1ybd2j.fd", "t1ybdj.fd" }
--- fnt.keepfiles = { "ybd.map", "*.afm", "*.pfb", "*.tfm" , "ts1ybd2w.fd", "ts1ybd2jw.fd", "ts1ybdjw.fd", "ts1ybdw.fd" }
--- fnt.keeptempfiles = { "*.pl" }
--- dofile(maindir .. "/fontscripts/fntbuild.lua")
--- checkdeps = {maindir .. "/nfssext-cfr", maindir .. "/fontscripts"}
+-- for _,i in ipairs (otftotfm.otfs) do
+--   table.insert(fnt.buildsuppfiles_sys, i )
+-- end
+-- needed for sandboxed checking
+fnt.mapfiles_add = { "EBGaramond.map" }
 ctanreadme = "README.md"
 -- demofiles = {"*-example.tex"}
--- flatten = true
--- flattentds = false
 manifestfile = "manifest.txt"
--- packtdszip = false
 tagfiles = {"*.dtx", "*.ins", "manifest.txt", "MANIFEST.txt", "README", "README.md"}
--- typesetdeps = {maindir .. "/nfssext-cfr", maindir .. "/fontscripts"}
--- typesetsourcefiles = {fnt.keepdir .. "/*", "nfssext-cfr*.sty"}
--- unpackexe = "pdflatex"
--- unpackfiles = {"*.ins"}
 -------------------------------------------------
--- fnt.builddeps = { maindir .. "/fontscripts" } 
+-- non-standard templates
+checksuppfiles={"fnt-testtemp-ebgaramond.lvt","fnt-regression-test-ebgaramond.tex"}
+-- additional files from dist for sandboxed checking
 fnt.checksuppfiles_add = {
   "/fonts/enc/dvips/ebgaramond",
   "/fonts/tfm/public/ebgaramond",
   "/fonts/type1/public/ebgaramond",
+  "/tex/generic/iftex",
   "/tex/latex/ebgaramond",
-  -- "/fonts/enc/dvips/lm",
-  -- "/fonts/tfm/public/lm",
-  -- "/fonts/type1/public/lm",
-  -- "etoolbox.sty",
-  -- "omslmr.fd",
-  -- "omslmsy.fd",
-  -- "omxlmex.fd",
-  -- "ot1lmr.fd",
-  -- "ot1lmss.fd",
-  -- "ot1lmtt.fd",
+  "/tex/latex/fontaxes",
+  "/tex/latex/xkeyval",
+  "/tex/generic/xkeyval",
   "svn-prov.sty",
-  -- "ts1lmdh.fd",
-  -- "ts1lmr.fd",
-  -- "ts1lmss.fd",
-  -- "ts1lmssq.fd",
-  -- "ts1lmtt.fd",
-  -- "ts1lmvtt.fd",
+  "textcomp.sty",
 }
+-- non-standard test templates
+fnt.testtemp = "fnt-testtemp-ebgaramond.lvt"
+fnt.regress = "fnt-regression-test-ebgaramond.tex"
 -------------------------------------------------
+-- otf2tfm {{{
 -- START doc fntebgm
-local function otf2tfm (mapfile,dir,otfs,encs,opts)
+local function otf2tfm (mapfile,dir)
   dir = dir or fnt.fntdir
-  otfs = otfs or otftotfm.otfs or filelist(dir,"*.otf")
-  encs = encs or otftotfm.encs or filelist(dir,"*.enc")
-  opts = opts or otftotfm.opts or ""
+  local otfs = otftotfm.otfs or filelist(dir,"*.otf")
+  local encs = otftotfm.encs or filelist(dir,"*.enc")
+  local opts = otftotfm.opts or ""
   local t = otfs
   local tencs = {}
   local tb = {}
   tb.encs = encs
   tb.opts = opts 
   for n,i in ipairs(otfs) do
-    print(i)
+    -- print(i)
     otfs[i] = tb 
     for _,j in ipairs(encs) do
       tencs[j] = tencs[j] or {}
@@ -85,9 +81,6 @@ local function otf2tfm (mapfile,dir,otfs,encs,opts)
     end
     t[n] = nil
     otfs[n] = nil
-  end
-  for a,b in pairs(tencs) do print(a,b) 
-    for i,j in pairs(b) do print(i,j) end
   end
   for i,j in pairs(t) do
     if type(j) ~= "table" then
@@ -165,11 +158,28 @@ local function otf2tfm (mapfile,dir,otfs,encs,opts)
   f:write((string.gsub(m,"\n",fnt.os_newline_cp)))
   f:close()
 end
+fnt.otfdir = sourcefiledir 
+fnt.encdir = sourcefiledir 
 local function fntebgm (dir,mode)
   dir = dir or fnt.fntdir
   mode = mode or "errorstopmode --halt-on-error"
+  -- lists if undefined
+  if #otftotfm.otfs == 0 then
+    otftotfm.otfs = filelist(fnt.otfdir, "*.otf")
+    if #otftotfm.otfs == 0 then
+      error("Could not find source otfs!")
+    end
+  end
+  if type(otftotfm.encs) == "string" then 
+    otftotfm.encs = { otftotfm.encs } 
+  end
+  if #otftotfm.encs == 0 then
+    otftotfm.encs = filelist(fnt.encdir, "*.enc")
+  end
+  otftotfm.opts = otftotfm.opts or ""
   local tmp = "ete.tex"
   -- set up the build environment
+  fnt.buildinit()
   assert(fnt.buildinit(), "Setting up build environment failed!")
   -- save dir and 'home'
   local gohome = abspath(".")
@@ -177,9 +187,7 @@ local function fntebgm (dir,mode)
   -- change to build dir
   assert(lfs.chdir(dir), "Could not switch to " .. dir .. "!")
   dir = "."
-  if type(otftotfm.encs) == "string" then 
-    otftotfm.encs = { otftotfm.encs } 
-  end
+  -- convert source .etx to input .enc
   for i,j in pairs(otftotfm.srcencs) do
     local ete = "\\input finstmsc.sty" .. fnt.os_newline_cp ..
     "\\etxtoenc{" .. i .. "}{" .. j .. "}" .. fnt.os_newline_cp ..
@@ -199,11 +207,14 @@ local function fntebgm (dir,mode)
     f:write((string.gsub(new_content,"\n",fnt.os_newline_cp)))
     f:close()
   end
+  -- convert fonts & generate support files
   otf2tfm (otftotfm.mapfile,dir,otftotfm.otfs,otftotfm.encs,otftotfm.opts)
   if fileexists(dir .. "/pdftex.map") then rm(dir,"pdftex.map") end
   -- return home
   assert(lfs.chdir(gohome), "Could not switch to " .. gohome .. "!")
   dir = origdir
+  if fnt.nifergwall ~= 0 then return fnt.nifergwall end
+  assert(fnt.build_tidy(), "Could not tidy " .. fnt.fntdir .. " -- NOT PROCEEDING TO KEEP!")
   -- call fnt.fntkeeper() to save the build results into fnt.keepdir else
   -- l3build deletes them before testing or compilation!
   assert(fnt.fntkeeper(),"FONT KEEPER FAILED IN " .. dir .. "! DO NOT MAKE STANDARD TARGETS WITHOUT RESOLVING!! ")
@@ -226,8 +237,8 @@ target_list[fnt.ntarg] = {
   end
 }
 -- STOP doc fntebgm
+-- }}}
 -------------------------------------------------
--- unpackdeps = {maindir .. "/fontscripts"}
 textfiles = {"*.md", "*.txt"}
 typesetruns = 1
 -------------------------------------------------
@@ -267,4 +278,4 @@ if fileexists(maindir .. "/nfssext/tag.lua") then
   dofile(maindir .. "/nfssext/tag.lua")
 end
 -------------------------------------------------
--- vim: ts=2:sw=2:tw=80:nospell
+-- vim: ts=2:sw=2:tw=0:nospell:et:foldmethod=marker:

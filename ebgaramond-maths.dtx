@@ -32,7 +32,7 @@
 % ref. ateb Max Chernoff: https://tex.stackexchange.com/a/723294/
 \def\MakePrivateLetters{\makeatletter\ExplSyntaxOn\endlinechar13}
 \ExplSyntaxOff
-\ProvidesFileSVN{$Id: ebgaramond-maths.dtx 10780 2025-02-07 08:15:26Z cfrees $}[v0.0 \revinfo][\filename: \filebase]
+\ProvidesFileSVN{$Id: ebgaramond-maths.dtx 10806 2025-02-15 07:36:08Z cfrees $}[v0.0 \revinfo][\filename: \filebase]
 \revinfo][\filebase DTX: ]
 \DefineFileInfoSVN[ebgaramond-maths]
 \documentclass[11pt,british]{ltxdoc}
@@ -414,11 +414,11 @@ otftotfm -e oml-ebgaramond.enc EBGaramond-Italic.otf \
 % \iffalse
 %<*sty>
 % \fi
-% \changes{v0.0}{2025-02-06}{Support for bold. Follow \texttt{ebgaramond} series settings.}
+% \changes{v1.3}{2025-02-06}{Support for bold. Follow \texttt{ebgaramond} series settings.}
 %    \begin{macrocode}
 \NeedsTeXFormat{LaTeX2e}
 \RequirePackage{svn-prov}
-\ProvidesPackageSVN[\filebase.sty]{$Id: ebgaramond-maths.dtx 10780 2025-02-07 08:15:26Z cfrees $}[v1.3 \revinfo]
+\ProvidesPackageSVN[\filebase.sty]{$Id: ebgaramond-maths.dtx 10806 2025-02-15 07:36:08Z cfrees $}[v1.3 \revinfo]
 \DefineFileInfoSVN
 %    \end{macrocode}
 % \iffalse
@@ -471,29 +471,30 @@ otftotfm -e oml-ebgaramond.enc EBGaramond-Italic.otf \
 % \iffalse
 %<*fd>
 % \fi
+% \changes{v1.3}{2025-02-07}{Support for bold and extended weights.}
 %    \begin{macrocode}
 %^^A Filename: OMLEBGaramond-Maths.fd
 %% Based on a file created using fontinst v1.928
 
 %% THIS FILE SHOULD BE PUT IN A TEX INPUTS DIRECTORY
 
-\ProvidesFileSVN{$Id: ebgaramond-maths.dtx 10780 2025-02-07 08:15:26Z cfrees $}[v1.3 \revinfo][OMLEBGaramond-Maths.fd: font definitions for OML/EBGaramond-Maths.]
+\ProvidesFileSVN{$Id: ebgaramond-maths.dtx 10806 2025-02-15 07:36:08Z cfrees $}[v1.3 \revinfo][OMLEBGaramond-Maths.fd: font definitions for OML/EBGaramond-Maths.]
 
 \DeclareFontFamily{OML}{EBGaramond-Maths}{}
 
 \DeclareFontShape{OML}{EBGaramond-Maths}{m}{it}{
 	<-> EBGaramond-Italic--oml-ebgaramond
 	}{}
-\DeclareFontShape{OML}{EBGaramond-SemiBoldMaths}{sb}{it}{
+\DeclareFontShape{OML}{EBGaramond-Maths}{sb}{it}{
 	<-> EBGaramond-SemiBoldItalic--oml-ebgaramond
 	}{}
-\DeclareFontShape{OML}{EBGaramond-BoldMaths}{b}{it}{
+\DeclareFontShape{OML}{EBGaramond-Maths}{b}{it}{
 	<-> EBGaramond-BoldItalic--oml-ebgaramond
 	}{}
-\DeclareFontShape{OML}{EBGaramond-ExtraBoldMaths}{eb}{it}{
+\DeclareFontShape{OML}{EBGaramond-Maths}{eb}{it}{
 	<-> EBGaramond-ExtraBoldItalic--oml-ebgaramond
 	}{}
-\DeclareFontShape{OML}{EBGaramond-MediumMaths}{medium}{it}{
+\DeclareFontShape{OML}{EBGaramond-Maths}{medium}{it}{
 	<-> EBGaramond-MediumItalic--oml-ebgaramond
 	}{}
 
