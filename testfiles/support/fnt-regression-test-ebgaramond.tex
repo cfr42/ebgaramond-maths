@@ -2,7 +2,7 @@
 % !TEX encoding = UTF-8 Unicode
 \pdftracingfonts=1
 \RequirePackage{svn-prov}
-\ProvidesFileSVN{$Id: fnt-regression-test-ebgaramond.tex 10807 2025-02-16 17:39:48Z cfrees $}[v0.0 \revinfo][fnt-regression-test-ebgaramond]
+\ProvidesFileSVN{$Id: fnt-regression-test-ebgaramond.tex 10809 2025-02-16 22:22:46Z cfrees $}[v0.0 \revinfo][fnt-regression-test-ebgaramond]
 \documentclass[10pt,a4paper]{article}
 \usepackage{fonttable}
 \usepackage{tracefnt}% infoshow is default; debugshow traces maths fonts, too
@@ -62,10 +62,10 @@
     #1 / #2 / #3 / #4 :
   }
   \edef\tempa{#3}%
-  \ifx\tempa m
+  \if\tempa m%
     \mathversion{normal}%
   \else
-    \ifx\tempa b
+    \if\tempa b%
       \mathversion{bold}%
     \else
       \mathversion{#3}%

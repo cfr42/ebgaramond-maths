@@ -5,15 +5,6 @@ TEST 1: test-OML-EBGaramond-Maths-m-it
 ============================================================
 LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/m/n' will be
 (Font)              scaled to size 10.0pt on input line ....
-! LaTeX Error: Math version `m' is not defined.
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-l. ...}
-      %
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
 LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/m/it' will be
 (Font)              scaled to size 10.0pt on input line ....
 LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/b/n' will be
@@ -54,17 +45,18 @@ LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/sb/sw' will be
 ============================================================
 TEST 3: test-OML-EBGaramond-Maths-b-it
 ============================================================
-! LaTeX Error: Math version `b' is not defined.
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-l. ...}
-      %
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
 LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/b/it' will be
 (Font)              scaled to size 10.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/b/it' will be
+(Font)              scaled to size 7.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/b/it' will be
+(Font)              scaled to size 5.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/b/sw' will be
+(Font)              scaled to size 10.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/b/sw' will be
+(Font)              scaled to size 7.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/b/sw' will be
+(Font)              scaled to size 5.0pt on input line ....
 ============================================================
 ============================================================
 TEST 4: test-OML-EBGaramond-Maths-eb-it
