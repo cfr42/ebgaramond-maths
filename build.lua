@@ -1,4 +1,4 @@
--- $Id: build.lua 10806 2025-02-15 07:36:08Z cfrees $
+-- $Id: build.lua 10807 2025-02-16 17:39:48Z cfrees $
 -------------------------------------------------
 -- Build configuration for ebgaramond-maths
 -------------------------------------------------
@@ -31,11 +31,7 @@ if #fnt.buildsuppfiles_sys == 0 then
     table.insert(fnt.buildsuppfiles_sys,i)
   end
 end
--- for _,i in ipairs (otftotfm.otfs) do
---   table.insert(fnt.buildsuppfiles_sys, i )
--- end
 -- needed for sandboxed checking
-fnt.mapfiles_add = { "EBGaramond.map" }
 ctanreadme = "README.md"
 -- demofiles = {"*-example.tex"}
 manifestfile = "manifest.txt"
@@ -46,9 +42,14 @@ checksuppfiles={"fnt-testtemp-ebgaramond.lvt","fnt-regression-test-ebgaramond.te
 -- additional files from dist for sandboxed checking
 fnt.checksuppfiles_add = {
   "/fonts/enc/dvips/ebgaramond",
+  "/fonts/tfm/public/amsfonts/cmextra",
+  "/fonts/tfm/public/amsfonts/symbols",
   "/fonts/tfm/public/ebgaramond",
+  "/fonts/type1/public/amsfonts/cmextra",
+  "/fonts/type1/public/amsfonts/symbols",
   "/fonts/type1/public/ebgaramond",
   "/tex/generic/iftex",
+  "/tex/latex/amsfonts",
   "/tex/latex/ebgaramond",
   "/tex/latex/fontaxes",
   "/tex/latex/xkeyval",
@@ -56,6 +57,8 @@ fnt.checksuppfiles_add = {
   "svn-prov.sty",
   "textcomp.sty",
 }
+fnt.keepfiles = {"*.enc", "*.map", "*.tfm" }
+fnt.mapfiles_add = { "EBGaramond.map" }
 -- non-standard test templates
 fnt.testtemp = "fnt-testtemp-ebgaramond.lvt"
 fnt.regress = "fnt-regression-test-ebgaramond.tex"

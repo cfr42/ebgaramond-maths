@@ -1,0 +1,129 @@
+This is a generated file for the l3build validation system.
+Don't change this file in any respect.
+============================================================
+TEST 1: test-OML-EBGaramond-Maths-m-it
+============================================================
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/m/n' will be
+(Font)              scaled to size 10.0pt on input line ....
+! LaTeX Error: Math version `m' is not defined.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+l. ...}
+      %
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/m/it' will be
+(Font)              scaled to size 10.0pt on input line ....
+! Missing character: There is no ^^O ("F) in font EBGaramond-Italic--oml-ebgaramond.
+\sampler ...psilon \phi \varphi \chi \psi \omega $
+                                                  \OMIT \\&\TIMO $\mathbf {A...
+l. ...}
+      %
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/b/n' will be
+(Font)              scaled to size 10.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/b/n' will be
+(Font)              scaled to size 7.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/b/n' will be
+(Font)              scaled to size 5.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/m/it' will be
+(Font)              scaled to size 7.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/m/it' will be
+(Font)              scaled to size 5.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/m/sw' will be
+(Font)              scaled to size 10.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/m/sw' will be
+(Font)              scaled to size 7.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/m/sw' will be
+(Font)              scaled to size 5.0pt on input line ....
+============================================================
+============================================================
+TEST 2: test-OML-EBGaramond-Maths-sb-it
+============================================================
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/sb/n' will be
+(Font)              scaled to size 10.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/sb/it' will be
+(Font)              scaled to size 10.0pt on input line ....
+! Missing character: There is no ^^O ("F) in font EBGaramond-SemiBoldItalic--oml-ebgaramond.
+\sampler ...psilon \phi \varphi \chi \psi \omega $
+                                                  \OMIT \\&\TIMO $\mathbf {A...
+l. ...}
+      %
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/sb/it' will be
+(Font)              scaled to size 7.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/sb/it' will be
+(Font)              scaled to size 5.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/sb/sw' will be
+(Font)              scaled to size 10.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/sb/sw' will be
+(Font)              scaled to size 7.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/sb/sw' will be
+(Font)              scaled to size 5.0pt on input line ....
+============================================================
+============================================================
+TEST 3: test-OML-EBGaramond-Maths-b-it
+============================================================
+! LaTeX Error: Math version `b' is not defined.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+l. ...}
+      %
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/b/it' will be
+(Font)              scaled to size 10.0pt on input line ....
+! Missing character: There is no ^^O ("F) in font EBGaramond-Italic--oml-ebgaramond.
+\sampler ...psilon \phi \varphi \chi \psi \omega $
+                                                  \OMIT \\&\TIMO $\mathbf {A...
+l. ...}
+      %
+============================================================
+============================================================
+TEST 4: test-OML-EBGaramond-Maths-eb-it
+============================================================
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/eb/n' will be
+(Font)              scaled to size 10.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/eb/it' will be
+(Font)              scaled to size 10.0pt on input line ....
+! Missing character: There is no ^^O ("F) in font EBGaramond-ExtraBoldItalic--oml-ebgaramond.
+\sampler ...psilon \phi \varphi \chi \psi \omega $
+                                                  \OMIT \\&\TIMO $\mathbf {A...
+l. ...}
+      %
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/eb/it' will be
+(Font)              scaled to size 7.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/eb/it' will be
+(Font)              scaled to size 5.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/eb/sw' will be
+(Font)              scaled to size 10.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/eb/sw' will be
+(Font)              scaled to size 7.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/eb/sw' will be
+(Font)              scaled to size 5.0pt on input line ....
+============================================================
+============================================================
+TEST 5: test-OML-EBGaramond-Maths-medium-it
+============================================================
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/medium/n' will be
+(Font)              scaled to size 10.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/medium/it' will be
+(Font)              scaled to size 10.0pt on input line ....
+! Missing character: There is no ^^O ("F) in font EBGaramond-MediumItalic--oml-ebgaramond.
+\sampler ...psilon \phi \varphi \chi \psi \omega $
+                                                  \OMIT \\&\TIMO $\mathbf {A...
+l. ...}
+      %
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/medium/it' will be
+(Font)              scaled to size 7.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/medium/it' will be
+(Font)              scaled to size 5.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/medium/sw' will be
+(Font)              scaled to size 10.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/medium/sw' will be
+(Font)              scaled to size 7.0pt on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/medium/sw' will be
+(Font)              scaled to size 5.0pt on input line ....
+============================================================

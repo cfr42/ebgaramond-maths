@@ -1,8 +1,9 @@
 % !TEX TS-program = pdflatex
 % !TEX encoding = UTF-8 Unicode
 \RequirePackage{svn-prov}
-\ProvidesFileSVN{$Id: ebgaramond-maths-tests.lvt 10807 2025-02-16 17:39:48Z cfrees $}[v0.0 \revinfo][ebgaramond-maths regression testing]
+\ProvidesFileSVN{$Id: ebgaramond-maths-tests-medium-eb.lvt 10807 2025-02-16 17:39:48Z cfrees $}[v0.0 \revinfo][ebgaramond-maths regression testing]
 \listfiles
+\PassOptionsToPackage{medium,extrabold}{ebgaramond}
 \input regression-test.tex\relax
 \input fnt-regression-test-ebgaramond.tex\relax
 \pdfmapfile{-EBGaramond-Maths.map}
