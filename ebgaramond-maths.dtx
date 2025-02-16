@@ -30,10 +30,9 @@
 %<*driver>
 \RequirePackage{svn-prov}
 % ref. ateb Max Chernoff: https://tex.stackexchange.com/a/723294/
-\def\MakePrivateLetters{\makeatletter\ExplSyntaxOn\endlinechar13}
+\def\MyMakePrivateLetters{\makeatletter\ExplSyntaxOn\endlinechar13}
 \ExplSyntaxOff
-\ProvidesFileSVN{$Id: ebgaramond-maths.dtx 10806 2025-02-15 07:36:08Z cfrees $}[v0.0 \revinfo][\filename: \filebase]
-\revinfo][\filebase DTX: ]
+\ProvidesFileSVN{$Id: ebgaramond-maths.dtx 10808 2025-02-16 20:19:35Z cfrees $}[v0.0 \revinfo][\filename: \filebase]
 \DefineFileInfoSVN[ebgaramond-maths]
 \documentclass[11pt,british]{ltxdoc}
 % l3doc loads fancyvrb
@@ -80,6 +79,11 @@
 \usepackage{csquotes}
 \MakeAutoQuote{‘}{’}
 \MakeAutoQuote*{“}{”}
+\makeatletter
+\ProvideDocumentCommand \lstyle {} {% from ebgaramond.sty because it only provides text font commands for figure styles
+  \fontfamily{EBGaramond-\ebgaramond@figurealign LF}\selectfont
+}
+\makeatother
 \usepackage{caption}
 \DeclareCaptionFont{lf}{\lstyle}
 \captionsetup[table]{labelfont=lf}
@@ -152,12 +156,12 @@
     }
   },
 }
-\NewDocumentCommand \ebgaramond-mathsdocset { +m }
+\NewDocumentCommand \ebgaramondmathsdocset { +m }
 {
   \keys_set:nn { ebgaramond-maths / doc } { #1 }
 }
 \ExplSyntaxOff
-\ebgaramond-mathsdocset{%
+\ebgaramondmathsdocset{%
   bug={\href{https://codeberg.org/cfr/ebgaramond-maths/issues}{\textsc{bugtracker}}},
   codeberg={\href{https://codeberg.org/cfr/ebgaramond-maths}{\textsc{codeberg}}},
   github={\href{https://github.com/cfr42/ebgaramond-maths}{\textsc{github}}},
@@ -418,7 +422,7 @@ otftotfm -e oml-ebgaramond.enc EBGaramond-Italic.otf \
 %    \begin{macrocode}
 \NeedsTeXFormat{LaTeX2e}
 \RequirePackage{svn-prov}
-\ProvidesPackageSVN[\filebase.sty]{$Id: ebgaramond-maths.dtx 10806 2025-02-15 07:36:08Z cfrees $}[v1.3 \revinfo]
+\ProvidesPackageSVN[\filebase.sty]{$Id: ebgaramond-maths.dtx 10808 2025-02-16 20:19:35Z cfrees $}[v1.3 \revinfo]
 \DefineFileInfoSVN
 %    \end{macrocode}
 % \iffalse
@@ -478,7 +482,7 @@ otftotfm -e oml-ebgaramond.enc EBGaramond-Italic.otf \
 
 %% THIS FILE SHOULD BE PUT IN A TEX INPUTS DIRECTORY
 
-\ProvidesFileSVN{$Id: ebgaramond-maths.dtx 10806 2025-02-15 07:36:08Z cfrees $}[v1.3 \revinfo][OMLEBGaramond-Maths.fd: font definitions for OML/EBGaramond-Maths.]
+\ProvidesFileSVN{$Id: ebgaramond-maths.dtx 10808 2025-02-16 20:19:35Z cfrees $}[v1.3 \revinfo][OMLEBGaramond-Maths.fd: font definitions for OML/EBGaramond-Maths.]
 
 \DeclareFontFamily{OML}{EBGaramond-Maths}{}
 

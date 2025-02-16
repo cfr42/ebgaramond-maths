@@ -1,4 +1,4 @@
--- $Id: build.lua 10807 2025-02-16 17:39:48Z cfrees $
+-- $Id: build.lua 10808 2025-02-16 20:19:35Z cfrees $
 -------------------------------------------------
 -- Build configuration for ebgaramond-maths
 -------------------------------------------------
@@ -205,7 +205,8 @@ local function fntebgm (dir,mode)
     f:close()
     local new_content = string.gsub(content, "TeXMathItalicEncoding", "EBGaramondTeXMathItalicEncoding")
     new_content = string.gsub(new_content, "oldstyle", "")
-    new_content = string.gsub(new_content, "^/mu", "/uni000B5")
+    new_content = string.gsub(new_content, "/mu", "/uni03BC")
+    new_content = string.gsub(new_content, "/epsilon1", "/epsilon")
     f = assert(io.open(j,"w"))
     f:write((string.gsub(new_content,"\n",fnt.os_newline_cp)))
     f:close()
