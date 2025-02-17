@@ -3,19 +3,20 @@ Don't change this file in any respect.
 ============================================================
 TEST 1: test-OML-EBGaramond-Maths-pairs
 ============================================================
-LaTeX Font Info:    Switching to \OT1/EBGaramond-OsF/m/n/10  on input line ....
-LaTeX Font Info:    Font shape `OT1/EBGaramond-OsF/eb/n' will be
-(Font)              scaled to size 10.0pt on input line ....
-LaTeX Font Info:    External font `EBGaramond-ExtraBold-osf-ot1 at10.0pt' loaded as
-(Font)              OT1/EBGaramond-OsF/eb/n/10  on input line ....
-LaTeX Font Info:    Switching to \OT1/EBGaramond-OsF/eb/n/10  on input line ....
-LaTeX Font Info:    Setting up math fonts for 10/12.0pt on input line ....
-LaTeX Font Info:    mathgroup (0) symoperators  :=
-(Font)              OT1/EBGaramond-LF/m/n 10/7/5 on input line ....
 LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/m/n' will be
 (Font)              scaled to size 10.0pt on input line ....
 LaTeX Font Info:    External font `EBGaramond-Regular-lf-ot1 at10.0pt' loaded as
 (Font)              OT1/EBGaramond-LF/m/n/10  on input line ....
+LaTeX Font Info:    Switching to \OT1/EBGaramond-LF/m/n/10  on input line ....
+LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/b/n' will be
+(Font)              scaled to size 10.0pt on input line ....
+LaTeX Font Info:    External font `EBGaramond-Bold-lf-ot1 at10.0pt' loaded as
+(Font)              OT1/EBGaramond-LF/b/n/10  on input line ....
+LaTeX Font Info:    Switching to \OT1/EBGaramond-LF/b/n/10  on input line ....
+LaTeX Font Info:    Switching to \OT1/EBGaramond-LF/m/n/10  on input line ....
+LaTeX Font Info:    Setting up math fonts for 10/12.0pt on input line ....
+LaTeX Font Info:    mathgroup (0) symoperators  :=
+(Font)              OT1/EBGaramond-LF/m/n 10/7/5 on input line ....
 LaTeX Font Info:    Font shape `OT1/EBGaramond-LF/m/n' will be
 (Font)              scaled to size 7.0pt on input line ....
 LaTeX Font Info:    External font `EBGaramond-Regular-lf-ot1 at7.0pt' loaded as
@@ -231,6 +232,549 @@ LaTeX Font Info:    Using \mathgroup (8) 8 on input line ....
 LaTeX Font Info:    Using \mathgroup (6) 6 on input line ....
 LaTeX Font Info:    Restoring \mathgroup (8) on input line ....
 LaTeX Font Info:    Restoring \mathgroup (default) on input line ....
+LaTeX Font Info:    Switching to \OT1/EBGaramond-OsF/m/n/10  on input line ....
+LaTeX Font Info:    Switching to \OT1/EBGaramond-OsF/m/n/10  on input line ....
+LaTeX Font Info:    Changing size to 10/12.0pt on input line ....
+Completed box being shipped out [1]
+\vbox(712.86615+0.0)x455.24408
+.\glue -28.45274
+.\vbox(741.3189+0.0)x455.24408
+..\vbox(0.0+0.0)x455.24408
+...\glue 0.0 plus 1.0fil
+...\hbox(0.0+0.0)x455.24408
+....\hbox(0.0+0.0)x455.24408
+..\glue 0.0
+..\glue(\lineskip) 0.0
+..\vbox(711.3189+0.0)x455.24408, glue set >20000.0fil
+...\write-{}
+...\glue(\topskip) 2.98001
+...\hbox(7.01999+0.20999)x455.24408, glue set 376.83424fil
+....\hbox(0.0+0.0)x0.0
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) m
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) d
+....\glue 1.99998 plus 1.0 minus 0.66699
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) i
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) s
+....\glue 1.99998 plus 1.0 minus 0.66699
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) m
+....\glue 1.99998 plus 1.0 minus 0.66699
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) a
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) n
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) d
+....\glue 1.99998 plus 1.0 minus 0.66699
+....\OT1/EBGaramond-LF/b/n/10 (EBGaramond-Bold-lf-ot1) b
+....\OT1/EBGaramond-LF/b/n/10 (EBGaramond-Bold-lf-ot1) f
+....\glue 2.37 plus 1.185 minus 0.79
+....\OT1/EBGaramond-LF/b/n/10 (EBGaramond-Bold-lf-ot1) i
+....\OT1/EBGaramond-LF/b/n/10 (EBGaramond-Bold-lf-ot1) s
+....\glue 2.37 plus 1.185 minus 0.79
+....\OT1/EBGaramond-LF/b/n/10 (EBGaramond-Bold-lf-ot1) e
+....\kern-0.12001
+....\OT1/EBGaramond-LF/b/n/10 (EBGaramond-Bold-lf-ot1) b
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue(\parskip) 0.0 plus 1.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 4.73003
+...\hbox(7.05998+2.9)x455.24408, glue set 53.80232fill
+....\hbox(0.0+0.0)x0.0
+....\mathon
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) E
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) E
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^M
+....\kern0.36
+....\mathoff
+....\glue 1.99998 plus 1.0 minus 0.66699
+....\mathon
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) A
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) B
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) C
+....\kern0.76
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) D
+....\OT1/EBGaramond-LF/m/it/10 (EBGaramond-Italic-lf-ot1) E
+....\kern0.46999
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) F
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) G
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) H
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) I
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) J
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) K
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) L
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) M
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) N
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) O
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) P
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) Q
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) R
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) S
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) T
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) U
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) V
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) W
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) X
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) Y
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) Z
+....\kern0.37
+....\mathoff
+....\glue 0.0 plus 1.0fill
+....\mathon
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) a
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) b
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) c
+....\kern0.18
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) d
+....\OT1/EBGaramond-LF/m/it/10 (EBGaramond-Italic-lf-ot1) e
+....\kern0.08
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) f
+....\kern1.01999
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) g
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) h
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) i
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) j
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) k
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) l
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) m
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) n
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) o
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) p
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) q
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) r
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) s
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) t
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) u
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) v
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) w
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) x
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) y
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) z
+....\mathoff
+....\glue 0.0 plus 1.0fill
+....\mathon
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) 1
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) 2
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) 3
+....\OT1/EBGaramond-LF/m/it/10 (EBGaramond-Italic-lf-ot1) 4
+....\kern0.14
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) 5
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) 6
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) 7
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) 8
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) 9
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) 0
+....\mathoff
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue(\parskip) 0.0 plus 1.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 1.78001
+...\hbox(7.31999+2.91)x455.24408, glue set 200.3044fill
+....\hbox(0.0+0.0)x0.0
+....\mathon
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) ^^@
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^@
+....\kern1.14
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) ^^A
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) ^^C
+....\kern0.04999
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^C
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) ^^D
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^D
+....\kern0.93
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) ^^E
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^E
+....\kern0.87
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) ^^F
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^F
+....\kern0.68
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) ^^G
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^G
+....\kern1.06
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) ^^H
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^H
+....\kern0.10999
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) ^^I
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^I
+....\kern1.0
+....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) 
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) 
+....\mathoff
+....\glue 0.0 plus 1.0fill
+....\mathon
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^K
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^L
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^M
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^N
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^O
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) "
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^P
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^Q
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^R
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^S
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^T
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^U
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^V
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^W
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^X
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^Y
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^Z
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) %
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^[
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) &
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^\
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^]
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^^
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) '
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) ^^_
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond)  
+....\OML/EBGaramond-Maths/m/it/10 (EBGaramond-Italic--oml-ebgaramond) !
+....\mathoff
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue(\parskip) 0.0 plus 1.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 0.83
+...\hbox(8.26+2.90498)x455.24408, glue set 49.0873fill
+....\hbox(0.0+0.0)x0.0
+....\mathon
+....\hbox(8.26+2.90498)x200.79982
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) A
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) B
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) C
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) D
+.....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) E
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) F
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) G
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) H
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) I
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) J
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) K
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) L
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) M
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) N
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) O
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) P
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) Q
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) R
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) S
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) T
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) U
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) V
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) W
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) X
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) Y
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) Z
+.....\kern1.54999
+....\mathoff
+....\glue 0.0 plus 1.0fill
+....\mathon
+....\hbox(7.03+2.90498)x109.38474
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) a
+.....\kern-0.20001
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) b
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) c
+.....\kern-0.15001
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) d
+.....\kern0.03499
+.....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) e
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) f
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) g
+.....\kern-0.25
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) h
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) i
+.....\kern-0.20001
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) j
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) k
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) l
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) m
+.....\kern-0.20001
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) n
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) o
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) p
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) q
+.....\kern-0.20001
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) r
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) ^^99
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) u
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) v
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) w
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) x
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) y
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) z
+....\mathoff
+....\glue 0.0 plus 1.0fill
+....\mathon
+....\hbox(6.48499+0.37999)x46.88493
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) 0
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) 1
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) 2
+.....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) 3
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) 4
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) 5
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) 6
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) 7
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) 8
+.....\OT1/EBGaramond-LF/m/sw/10 (EBGaramond-Italic-lf-swash-ot1) 9
+.....\kern0.36499
+....\mathoff
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue(\parskip) 0.0 plus 1.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 1.99503
+...\hbox(7.09999+2.89499)x455.24408, glue set 45.26627fill
+....\hbox(0.0+0.0)x0.0
+....\mathon
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) A
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) B
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) C
+....\kern0.70999
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) D
+....\OT1/EBGaramond-LF/eb/it/10 (EBGaramond-ExtraBoldItalic-lf-ot1) E
+....\kern0.50198
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) F
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) G
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) H
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) I
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) J
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) K
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) L
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) M
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) N
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) O
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) P
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) Q
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) R
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) S
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) T
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) U
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) V
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) W
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) X
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) Y
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) Z
+....\kern0.54
+....\mathoff
+....\glue 0.0 plus 1.0fill
+....\mathon
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) a
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) b
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) c
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) d
+....\OT1/EBGaramond-LF/eb/it/10 (EBGaramond-ExtraBoldItalic-lf-ot1) e
+....\kern0.04999
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) f
+....\kern1.09999
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) g
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) h
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) i
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) j
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) k
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) l
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) m
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) n
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) o
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) p
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) q
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) r
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) s
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) t
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) u
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) v
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) w
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) x
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) y
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) z
+....\kern0.04
+....\mathoff
+....\glue 0.0 plus 1.0fill
+....\mathon
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) 1
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) 2
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) 3
+....\OT1/EBGaramond-LF/eb/it/10 (EBGaramond-ExtraBoldItalic-lf-ot1) 4
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) 5
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) 6
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) 7
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) 8
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) 9
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) 0
+....\mathoff
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue(\parskip) 0.0 plus 1.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 1.47502
+...\hbox(7.62999+2.96999)x455.24408, glue set 179.62439fill
+....\hbox(0.0+0.0)x0.0
+....\mathon
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) ^^@
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^@
+....\kern1.25
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) ^^A
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) ^^C
+....\kern0.08
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^C
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) ^^D
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^D
+....\kern0.92
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) ^^E
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^E
+....\kern1.18
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) ^^F
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^F
+....\kern0.71999
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) ^^G
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^G
+....\kern1.11
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) ^^H
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^H
+....\kern0.26
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) ^^I
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^I
+....\kern0.90999
+....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) 
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) 
+....\mathoff
+....\glue 0.0 plus 1.0fill
+....\mathon
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^K
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^L
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^M
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^N
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^O
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) "
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^P
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^Q
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^R
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^S
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^T
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^U
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^V
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^W
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^X
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^Y
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^Z
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) %
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^[
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) &
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^\
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^]
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^^
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) '
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) ^^_
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond)  
+....\OML/EBGaramond-Maths/eb/it/10 (EBGaramond-ExtraBoldItalic--oml-ebgaramond) !
+....\mathoff
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue(\parskip) 0.0 plus 1.0
+...\glue(\parskip) 0.0
+...\glue(\baselineskip) 0.76003
+...\hbox(8.26999+3.59999)x455.24408, glue set 27.30179fill
+....\hbox(0.0+0.0)x0.0
+....\mathon
+....\hbox(8.26999+3.59999)x219.88481
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) A
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) B
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) C
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) D
+.....\kern0.12498
+.....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) E
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) F
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) G
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) H
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) I
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) J
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) K
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) L
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) M
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) N
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) O
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) P
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) Q
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) R
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) S
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) T
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) U
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) V
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) W
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) X
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) Y
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) Z
+.....\kern1.19
+....\mathoff
+....\glue 0.0 plus 1.0fill
+....\mathon
+....\hbox(7.12999+2.91)x129.18472
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) a
+.....\kern-0.20001
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) b
+.....\kern0.15
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) c
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) d
+.....\kern0.51
+.....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) e
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) f
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) g
+.....\kern-0.15001
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) h
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) i
+.....\kern-0.20001
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) j
+.....\kern-0.20001
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) k
+.....\kern-0.45001
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) l
+.....\kern-0.1
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) m
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) n
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) o
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) p
+.....\kern0.15
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) q
+.....\kern-0.20001
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) r
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) ^^99
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) u
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) v
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) w
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) x
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) y
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) z
+.....\kern0.03499
+....\mathoff
+....\glue 0.0 plus 1.0fill
+....\mathon
+....\hbox(6.605+0.33499)x51.57097
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) 0
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) 1
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) 2
+.....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) 3
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) 4
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) 5
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) 6
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) 7
+.....\kern-0.15001
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) 8
+.....\OT1/EBGaramond-LF/eb/sw/10 (EBGaramond-ExtraBoldItalic-lf-swash-ot1) 9
+.....\kern0.411
+....\mathoff
+....\penalty 10000
+....\glue(\parfillskip) 0.0 plus 1.0fil
+....\glue(\rightskip) 0.0
+...\glue -3.59999
+...\glue 0.0 plus 0.0001fil
+..\glue(\baselineskip) 30.0
+..\hbox(0.0+0.0)x455.24408
+...\hbox(0.0+0.0)x455.24408
+{ebg_dacnth.enc}{oml-ebgaramond-1.enc}{ebg_3uowis.enc}{ebg_76r3mr.enc}
+LaTeX Font Info:    Restoring size to 10/12.0pt on input line ....
 LaTeX Font Info:    Setting up math fonts for 10/12.0pt on input line ....
 LaTeX Font Info:    mathgroup (0) symoperators  :=
 (Font)              OT1/EBGaramond-LF/m/n 10/7/5 on input line ....
@@ -270,9 +814,3 @@ LaTeX Font Info:    mathgroup (5) symAMSb  :=
 LaTeX Font Info:    mathgroup (8) 8 :=
 (Font)              OT1/EBGaramond-LF/m/sw 10/7/5 on input line ....
 ============================================================
-LaTeX Font Info:    Switching to \OT1/EBGaramond-OsF/m/n/10  on input line ....
-LaTeX Font Info:    Switching to \OT1/EBGaramond-OsF/m/n/10  on input line ....
-LaTeX Font Info:    Changing size to 10/12.0pt on input line ....
-[1
-{ebg_qn2lct.enc}{oml-ebgaramond-1.enc}{ebg_dacnth.enc}{ebg_3uowis.enc}{ebg_76r3mr.enc}]
-LaTeX Font Info:    Restoring size to 10/12.0pt on input line ....

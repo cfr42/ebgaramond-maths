@@ -4,7 +4,7 @@
 \listfiles
 \input regression-test.tex\relax
 \input fnt-regression-test-ebgaramond.tex\relax
-\ProvidesFileSVN{$Id: ebgaramond-maths-tests.lvt 10810 2025-02-17 03:42:47Z cfrees $}[v0.0 \revinfo][ebgaramond-maths regression testing]
+\ProvidesFileSVN{$Id: ebgaramond-maths-tests.lvt 10811 2025-02-17 07:20:17Z cfrees $}[v0.0 \revinfo][ebgaramond-maths regression testing]
 \setlength{\parindent}{0pt}
 \textheight=250mm
 \textwidth=160mm
@@ -20,14 +20,9 @@
 \usepackage{ebgaramond-maths}
 \begin{document}
 \START
-\ExplSyntaxOn
 \TEST{test-OML-EBGaramond-Maths-pairs}{%
-  \ebgm_test_pairs:
+  \pairs 
 }
-\ExplSyntaxOff
-\vfill
-\break
 \END
-\end{document}
 
 % vim: ts=2:sw=2:nospell

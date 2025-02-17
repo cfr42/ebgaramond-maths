@@ -2,7 +2,7 @@
 % !TEX encoding = UTF-8 Unicode
 \pdftracingfonts=1
 \RequirePackage{svn-prov}
-\ProvidesFileSVN{$Id: fnt-regression-test-ebgaramond.tex 10810 2025-02-17 03:42:47Z cfrees $}[v0.0 \revinfo][fnt-regression-test-ebgaramond]
+\ProvidesFileSVN{$Id: fnt-regression-test-ebgaramond.tex 10811 2025-02-17 07:20:17Z cfrees $}[v0.0 \revinfo][fnt-regression-test-ebgaramond]
 \documentclass[10pt,a4paper]{article}
 \usepackage[debugshow]{tracefnt}% infoshow is default; debugshow traces maths fonts, too
 \usepackage{fonttable}
@@ -51,6 +51,7 @@
   \SetMathAlphabet{\mathcal}  {eb}      {OT1} {EBGaramond-LF} {eb} {sw}
   \SetMathAlphabet{\mathcal}  {medium}  {OT1} {EBGaramond-LF} {medium} {sw}
 }
+\ExplSyntaxOff
 \makeatletter
 \newcommand\sampler{}
 \def\sampler#1#2#3#4{%
@@ -123,53 +124,53 @@
   \break
 }
 
-\ExplSyntaxOn
-\cs_new_protected:Npn \ebgm_test_pairs: 
-{
-  \group_begin:
-    \parindent=0pt
-    \tracinglostchars\thr@@
-    \showoutput
-    {
-      \fontencoding{OT1}\fontfamily{EBGaramond-OsF}\fontshape{n}\mdseries
-      md ~ is ~ \mdseries@rm{} ~ and ~
-      \bfseries
-      bf ~ is ~ \bfseries@rm{} \par
-    }
-    \par
+\newcommand \pairs {}
+\def\pairs{%
+  \parindent=0pt
+  {
+    \fontencoding{OT1}\fontfamily{EBGaramond-LF}\fontshape{n}\fontseries{\mdseries@rm}\selectfont
+    md   is   \mdseries@rm{}   and 
+    \bfseries
+    bf   is   \bfseries@rm{} \par
+  }
+  \tracinglostchars\thr@@
+  \showoutput
+  \pikfont{OT1}{EBGaramond-LF}{\mdseries@rm}{n}%
+  \par
 
-    \mathversion{normal}
-    $ABC\mathbf{D}\mathit{E}\mathrm{F}GHIJKLMNOPQRSTUVWXYZ$\hfill
-    $abc\mathbf{d}\mathit{e}\mathrm{f}ghijklmnopqrstuvwxyz$\hfill
-    $12\mathbf{3}\mathit{4}\mathrm{5}67890$
-    \par
+  \mathversion{normal}
+  $EE\gamma$
+  $ABC\mathbf{D}\mathit{E}\mathrm{F}GHIJKLMNOPQRSTUVWXYZ$\hfill
+  $abc\mathbf{d}\mathit{e}\mathrm{f}ghijklmnopqrstuvwxyz$\hfill
+  $12\mathbf{3}\mathit{4}\mathrm{5}67890$
+  \par
 
-    $\Gamma\varGamma\mathbf{\Delta}\Lambda\varLambda\Xi\varXi\Pi\varPi\Sigma\varSigma\Upsilon\varUpsilon\Phi\varPhi\Psi\varPsi\Omega\varOmega$\hfill
-    $\alpha\beta\gamma\mathbf{\delta}\epsilon\varepsilon\zeta\eta\theta\iota\kappa\lambda\mu\nu\xi\pi\rho\varrho\sigma\varsigma\tau\upsilon\phi\varphi\chi\psi\omega$
-    \par
+  $\Gamma\varGamma\mathbf{\Delta}\Lambda\varLambda\Xi\varXi\Pi\varPi\Sigma\varSigma\Upsilon\varUpsilon\Phi\varPhi\Psi\varPsi\Omega\varOmega$\hfill
+  $\alpha\beta\gamma\mathbf{\delta}\epsilon\varepsilon\zeta\eta\theta\iota\kappa\lambda\mu\nu\xi\pi\rho\varrho\sigma\varsigma\tau\upsilon\phi\varphi\chi\psi\omega$
+  \par
 
-    $\mathcal{ABCD\mathbf{E}FGHIJKLMNOPQRSTUVWXYZ}$\hfill
-    $\mathcal{abcd\mathbf{e}fghijklmnopqrstuvwxyz}$\hfill
-    $\mathcal{012\mathbf{3}456789}$
-    \par
+  $\mathcal{ABCD\mathbf{E}FGHIJKLMNOPQRSTUVWXYZ}$\hfill
+  $\mathcal{abcd\mathbf{e}fghijklmnopqrstuvwxyz}$\hfill
+  $\mathcal{012\mathbf{3}456789}$
+  \par
 
-    \mathversion{bold}
-    $ABC\mathbf{D}\mathit{E}\mathrm{F}GHIJKLMNOPQRSTUVWXYZ$\hfill
-    $abc\mathbf{d}\mathit{e}\mathrm{f}ghijklmnopqrstuvwxyz$\hfill
-    $12\mathbf{3}\mathit{4}\mathrm{5}67890$
-    \par
+  \mathversion{bold}
+  $ABC\mathbf{D}\mathit{E}\mathrm{F}GHIJKLMNOPQRSTUVWXYZ$\hfill
+  $abc\mathbf{d}\mathit{e}\mathrm{f}ghijklmnopqrstuvwxyz$\hfill
+  $12\mathbf{3}\mathit{4}\mathrm{5}67890$
+  \par
 
-    $\Gamma\varGamma\mathbf{\Delta}\Lambda\varLambda\Xi\varXi\Pi\varPi\Sigma\varSigma\Upsilon\varUpsilon\Phi\varPhi\Psi\varPsi\Omega\varOmega$\hfill
-    $\alpha\beta\gamma\mathbf{\delta}\epsilon\varepsilon\zeta\eta\theta\iota\kappa\lambda\mu\nu\xi\pi\rho\varrho\sigma\varsigma\tau\upsilon\phi\varphi\chi\psi\omega$
-    \par
+  $\Gamma\varGamma\mathbf{\Delta}\Lambda\varLambda\Xi\varXi\Pi\varPi\Sigma\varSigma\Upsilon\varUpsilon\Phi\varPhi\Psi\varPsi\Omega\varOmega$\hfill
+  $\alpha\beta\gamma\mathbf{\delta}\epsilon\varepsilon\zeta\eta\theta\iota\kappa\lambda\mu\nu\xi\pi\rho\varrho\sigma\varsigma\tau\upsilon\phi\varphi\chi\psi\omega$
+  \par
 
-    $\mathcal{ABCD\mathbf{E}FGHIJKLMNOPQRSTUVWXYZ}$\hfill
-    $\mathcal{abcd\mathbf{e}fghijklmnopqrstuvwxyz}$\hfill
-    $\mathcal{012\mathbf{3}456789}$
-    \par
-  \group_end:
+  $\mathcal{ABCD\mathbf{E}FGHIJKLMNOPQRSTUVWXYZ}$\hfill
+  $\mathcal{abcd\mathbf{e}fghijklmnopqrstuvwxyz}$\hfill
+  $\mathcal{012\mathbf{3}456789}$
+  \par
+
+  \break
 }
-\ExplSyntaxOff
 
 \makeatother
 \pagestyle{empty}

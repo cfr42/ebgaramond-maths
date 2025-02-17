@@ -802,12 +802,14 @@ Completed box being shipped out [1]
 ..\vbox(711.3189+0.0)x455.24408, glue set 615.6989fill
 ...\write-{}
 ...\glue(\topskip) 3.00002
-...\hbox(6.99998+0.62)x455.24408, glue set 325.39424fil
+...\hbox(6.99998+0.62)x455.24408, glue set 308.36137fil
 ....\hbox(0.0+0.0)x0.0
 ....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) O
 ....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) M
 ....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) L
+....\glue 1.99998 plus 0.999 minus 0.66765
 ....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) /
+....\glue 1.99998 plus 1.0 minus 0.66699
 ....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) E
 ....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) B
 ....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) G
@@ -826,13 +828,18 @@ Completed box being shipped out [1]
 ....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) t
 ....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) h
 ....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) s
+....\glue 1.99998 plus 1.0 minus 0.66699
 ....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) /
-....\kern-0.7
+....\glue 1.99998 plus 1.0 minus 0.66699
 ....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) m
+....\glue 1.99998 plus 1.0 minus 0.66699
 ....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) /
+....\glue 1.99998 plus 1.0 minus 0.66699
 ....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) i
 ....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) t
+....\glue 1.99998 plus 1.0 minus 0.66699
 ....\OT1/EBGaramond-LF/m/n/10 (EBGaramond-Regular-lf-ot1) :
+....\glue 2.33298 plus 2.0 minus 0.3335
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0 plus 1.0fil
 ....\glue(\rightskip) 0.0
@@ -2305,12 +2312,14 @@ Completed box being shipped out [2]
 ..\glue(\lineskip) 0.0
 ..\vbox(711.3189+0.0)x455.24408, glue set 615.6989fill
 ...\glue(\topskip) 2.99
-...\hbox(7.01+0.62)x455.24408, glue set 319.19426fil
+...\hbox(7.01+0.62)x455.24408, glue set 300.34926fil
 ....\hbox(0.0+0.0)x0.0
 ....\OT1/EBGaramond-LF/sb/n/10 (EBGaramond-SemiBold-lf-ot1) O
 ....\OT1/EBGaramond-LF/sb/n/10 (EBGaramond-SemiBold-lf-ot1) M
 ....\OT1/EBGaramond-LF/sb/n/10 (EBGaramond-SemiBold-lf-ot1) L
+....\glue 2.25 plus 1.12387 minus 0.75073
 ....\OT1/EBGaramond-LF/sb/n/10 (EBGaramond-SemiBold-lf-ot1) /
+....\glue 2.25 plus 1.125 minus 0.74998
 ....\OT1/EBGaramond-LF/sb/n/10 (EBGaramond-SemiBold-lf-ot1) E
 ....\OT1/EBGaramond-LF/sb/n/10 (EBGaramond-SemiBold-lf-ot1) B
 ....\OT1/EBGaramond-LF/sb/n/10 (EBGaramond-SemiBold-lf-ot1) G
@@ -2329,14 +2338,19 @@ Completed box being shipped out [2]
 ....\OT1/EBGaramond-LF/sb/n/10 (EBGaramond-SemiBold-lf-ot1) t
 ....\OT1/EBGaramond-LF/sb/n/10 (EBGaramond-SemiBold-lf-ot1) h
 ....\OT1/EBGaramond-LF/sb/n/10 (EBGaramond-SemiBold-lf-ot1) s
+....\glue 2.25 plus 1.125 minus 0.74998
 ....\OT1/EBGaramond-LF/sb/n/10 (EBGaramond-SemiBold-lf-ot1) /
-....\kern-0.47
+....\glue 2.25 plus 1.125 minus 0.74998
 ....\OT1/EBGaramond-LF/sb/n/10 (EBGaramond-SemiBold-lf-ot1) s
 ....\OT1/EBGaramond-LF/sb/n/10 (EBGaramond-SemiBold-lf-ot1) b
+....\glue 2.25 plus 1.125 minus 0.74998
 ....\OT1/EBGaramond-LF/sb/n/10 (EBGaramond-SemiBold-lf-ot1) /
+....\glue 2.25 plus 1.125 minus 0.74998
 ....\OT1/EBGaramond-LF/sb/n/10 (EBGaramond-SemiBold-lf-ot1) i
 ....\OT1/EBGaramond-LF/sb/n/10 (EBGaramond-SemiBold-lf-ot1) t
+....\glue 2.25 plus 1.125 minus 0.74998
 ....\OT1/EBGaramond-LF/sb/n/10 (EBGaramond-SemiBold-lf-ot1) :
+....\glue 2.625 plus 2.25 minus 0.37498
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0 plus 1.0fil
 ....\glue(\rightskip) 0.0
@@ -3821,12 +3835,14 @@ Completed box being shipped out [3]
 ..\glue(\lineskip) 0.0
 ..\vbox(711.3189+0.0)x455.24408, glue set 615.6989fill
 ...\glue(\topskip) 2.98001
-...\hbox(7.01999+0.62)x455.24408, glue set 319.65425fil
+...\hbox(7.01999+0.62)x455.24408, glue set 300.2993fil
 ....\hbox(0.0+0.0)x0.0
 ....\OT1/EBGaramond-LF/b/n/10 (EBGaramond-Bold-lf-ot1) O
 ....\OT1/EBGaramond-LF/b/n/10 (EBGaramond-Bold-lf-ot1) M
 ....\OT1/EBGaramond-LF/b/n/10 (EBGaramond-Bold-lf-ot1) L
+....\glue 2.37 plus 1.1838 minus 0.79077
 ....\OT1/EBGaramond-LF/b/n/10 (EBGaramond-Bold-lf-ot1) /
+....\glue 2.37 plus 1.185 minus 0.79
 ....\OT1/EBGaramond-LF/b/n/10 (EBGaramond-Bold-lf-ot1) E
 ....\OT1/EBGaramond-LF/b/n/10 (EBGaramond-Bold-lf-ot1) B
 ....\OT1/EBGaramond-LF/b/n/10 (EBGaramond-Bold-lf-ot1) G
@@ -3845,12 +3861,18 @@ Completed box being shipped out [3]
 ....\OT1/EBGaramond-LF/b/n/10 (EBGaramond-Bold-lf-ot1) t
 ....\OT1/EBGaramond-LF/b/n/10 (EBGaramond-Bold-lf-ot1) h
 ....\OT1/EBGaramond-LF/b/n/10 (EBGaramond-Bold-lf-ot1) s
+....\glue 2.37 plus 1.185 minus 0.79
 ....\OT1/EBGaramond-LF/b/n/10 (EBGaramond-Bold-lf-ot1) /
+....\glue 2.37 plus 1.185 minus 0.79
 ....\OT1/EBGaramond-LF/b/n/10 (EBGaramond-Bold-lf-ot1) b
+....\glue 2.37 plus 1.185 minus 0.79
 ....\OT1/EBGaramond-LF/b/n/10 (EBGaramond-Bold-lf-ot1) /
+....\glue 2.37 plus 1.185 minus 0.79
 ....\OT1/EBGaramond-LF/b/n/10 (EBGaramond-Bold-lf-ot1) i
 ....\OT1/EBGaramond-LF/b/n/10 (EBGaramond-Bold-lf-ot1) t
+....\glue 2.37 plus 1.185 minus 0.79
 ....\OT1/EBGaramond-LF/b/n/10 (EBGaramond-Bold-lf-ot1) :
+....\glue 2.76498 plus 2.37 minus 0.39499
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0 plus 1.0fil
 ....\glue(\rightskip) 0.0
@@ -5335,12 +5357,14 @@ Completed box being shipped out [4]
 ..\glue(\lineskip) 0.0
 ..\vbox(711.3189+0.0)x455.24408, glue set 615.7389fill
 ...\glue(\topskip) 2.94002
-...\hbox(7.05998+0.57999)x455.24408, glue set 314.70433fil
+...\hbox(7.05998+0.57999)x455.24408, glue set 293.89636fil
 ....\hbox(0.0+0.0)x0.0
 ....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) O
 ....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) M
 ....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) L
+....\glue 2.45 plus 1.22375 minus 0.81781
 ....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) /
+....\glue 2.45 plus 1.22499 minus 0.817
 ....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) E
 ....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) B
 ....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) G
@@ -5359,15 +5383,20 @@ Completed box being shipped out [4]
 ....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) t
 ....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) h
 ....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) s
+....\glue 2.45 plus 1.22499 minus 0.817
 ....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) /
-....\kern-0.8
+....\glue 2.45 plus 1.22499 minus 0.817
 ....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) e
 ....\kern-0.15001
 ....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) b
+....\glue 2.45 plus 1.22499 minus 0.817
 ....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) /
+....\glue 2.45 plus 1.22499 minus 0.817
 ....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) i
 ....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) t
+....\glue 2.45 plus 1.22499 minus 0.817
 ....\OT1/EBGaramond-LF/eb/n/10 (EBGaramond-ExtraBold-lf-ot1) :
+....\glue 2.85799 plus 2.44998 minus 0.4085
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0 plus 1.0fil
 ....\glue(\rightskip) 0.0
@@ -6852,12 +6881,14 @@ Completed box being shipped out [5]
 ..\glue(\lineskip) 0.0
 ..\vbox(711.3189+0.0)x455.24408, glue set 615.6989fill
 ...\glue(\topskip) 3.01501
-...\hbox(6.98499+0.62)x455.24408, glue set 297.62434fil
+...\hbox(6.98499+0.62)x455.24408, glue set 279.55942fil
 ....\hbox(0.0+0.0)x0.0
 ....\OT1/EBGaramond-LF/medium/n/10 (EBGaramond-Medium-lf-ot1) O
 ....\OT1/EBGaramond-LF/medium/n/10 (EBGaramond-Medium-lf-ot1) M
 ....\OT1/EBGaramond-LF/medium/n/10 (EBGaramond-Medium-lf-ot1) L
+....\glue 2.12999 plus 1.06392 minus 0.7107
 ....\OT1/EBGaramond-LF/medium/n/10 (EBGaramond-Medium-lf-ot1) /
+....\glue 2.12999 plus 1.06499 minus 0.70999
 ....\OT1/EBGaramond-LF/medium/n/10 (EBGaramond-Medium-lf-ot1) E
 ....\OT1/EBGaramond-LF/medium/n/10 (EBGaramond-Medium-lf-ot1) B
 ....\OT1/EBGaramond-LF/medium/n/10 (EBGaramond-Medium-lf-ot1) G
@@ -6876,8 +6907,9 @@ Completed box being shipped out [5]
 ....\OT1/EBGaramond-LF/medium/n/10 (EBGaramond-Medium-lf-ot1) t
 ....\OT1/EBGaramond-LF/medium/n/10 (EBGaramond-Medium-lf-ot1) h
 ....\OT1/EBGaramond-LF/medium/n/10 (EBGaramond-Medium-lf-ot1) s
+....\glue 2.12999 plus 1.06499 minus 0.70999
 ....\OT1/EBGaramond-LF/medium/n/10 (EBGaramond-Medium-lf-ot1) /
-....\kern-0.67001
+....\glue 2.12999 plus 1.06499 minus 0.70999
 ....\OT1/EBGaramond-LF/medium/n/10 (EBGaramond-Medium-lf-ot1) m
 ....\OT1/EBGaramond-LF/medium/n/10 (EBGaramond-Medium-lf-ot1) e
 ....\kern-0.07
@@ -6885,10 +6917,14 @@ Completed box being shipped out [5]
 ....\OT1/EBGaramond-LF/medium/n/10 (EBGaramond-Medium-lf-ot1) i
 ....\OT1/EBGaramond-LF/medium/n/10 (EBGaramond-Medium-lf-ot1) u
 ....\OT1/EBGaramond-LF/medium/n/10 (EBGaramond-Medium-lf-ot1) m
+....\glue 2.12999 plus 1.06499 minus 0.70999
 ....\OT1/EBGaramond-LF/medium/n/10 (EBGaramond-Medium-lf-ot1) /
+....\glue 2.12999 plus 1.06499 minus 0.70999
 ....\OT1/EBGaramond-LF/medium/n/10 (EBGaramond-Medium-lf-ot1) i
 ....\OT1/EBGaramond-LF/medium/n/10 (EBGaramond-Medium-lf-ot1) t
+....\glue 2.12999 plus 1.06499 minus 0.70999
 ....\OT1/EBGaramond-LF/medium/n/10 (EBGaramond-Medium-lf-ot1) :
+....\glue 2.48499 plus 2.12997 minus 0.355
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0 plus 1.0fil
 ....\glue(\rightskip) 0.0
