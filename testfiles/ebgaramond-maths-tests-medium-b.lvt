@@ -1,11 +1,11 @@
 % !TEX TS-program = pdflatex
 % !TEX encoding = UTF-8 Unicode
-\RequirePackage{svn-prov}
-\ProvidesFileSVN{$Id: ebgaramond-maths-tests-medium-b.lvt 10807 2025-02-16 17:39:48Z cfrees $}[v0.0 \revinfo][ebgaramond-maths regression testing]
+\pdftracingfonts=1
 \listfiles
 \PassOptionsToPackage{medium}{ebgaramond}
 \input regression-test.tex\relax
 \input fnt-regression-test-ebgaramond.tex\relax
+\ProvidesFileSVN{$Id: ebgaramond-maths-tests-medium-b.lvt 10810 2025-02-17 03:42:47Z cfrees $}[v0.0 \revinfo][ebgaramond-maths regression testing]
 \pdfmapfile{-EBGaramond-Maths.map}
 \pdfmapfile{+EBGaramond-Maths.map}
 \usepackage{ebgaramond-maths}
@@ -26,10 +26,8 @@
   \ebgm_test_pairs:
 }
 \ExplSyntaxOff
-\OMIT
 \vfill
 \break
-\TIMO
 \END
 \end{document}
 

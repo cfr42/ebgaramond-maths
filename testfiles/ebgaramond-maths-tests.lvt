@@ -1,13 +1,10 @@
 % !TEX TS-program = pdflatex
 % !TEX encoding = UTF-8 Unicode
-\RequirePackage{svn-prov}
-\ProvidesFileSVN{$Id: ebgaramond-maths-tests.lvt 10807 2025-02-16 17:39:48Z cfrees $}[v0.0 \revinfo][ebgaramond-maths regression testing]
+\pdftracingfonts=1
 \listfiles
 \input regression-test.tex\relax
 \input fnt-regression-test-ebgaramond.tex\relax
-\pdfmapfile{-EBGaramond-Maths.map}
-\pdfmapfile{+EBGaramond-Maths.map}
-\usepackage{ebgaramond-maths}
+\ProvidesFileSVN{$Id: ebgaramond-maths-tests.lvt 10810 2025-02-17 03:42:47Z cfrees $}[v0.0 \revinfo][ebgaramond-maths regression testing]
 \setlength{\parindent}{0pt}
 \textheight=250mm
 \textwidth=160mm
@@ -18,6 +15,9 @@
 \topmargin=-10mm
 \marginparwidth=0pt
 \marginparsep=0pt
+\pdfmapfile{-EBGaramond-Maths.map}
+\pdfmapfile{+EBGaramond-Maths.map}
+\usepackage{ebgaramond-maths}
 \begin{document}
 \START
 \ExplSyntaxOn
@@ -25,10 +25,8 @@
   \ebgm_test_pairs:
 }
 \ExplSyntaxOff
-\OMIT
 \vfill
 \break
-\TIMO
 \END
 \end{document}
 

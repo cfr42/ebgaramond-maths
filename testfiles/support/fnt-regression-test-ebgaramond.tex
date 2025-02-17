@@ -2,10 +2,10 @@
 % !TEX encoding = UTF-8 Unicode
 \pdftracingfonts=1
 \RequirePackage{svn-prov}
-\ProvidesFileSVN{$Id: fnt-regression-test-ebgaramond.tex 10809 2025-02-16 22:22:46Z cfrees $}[v0.0 \revinfo][fnt-regression-test-ebgaramond]
+\ProvidesFileSVN{$Id: fnt-regression-test-ebgaramond.tex 10810 2025-02-17 03:42:47Z cfrees $}[v0.0 \revinfo][fnt-regression-test-ebgaramond]
 \documentclass[10pt,a4paper]{article}
+\usepackage[debugshow]{tracefnt}% infoshow is default; debugshow traces maths fonts, too
 \usepackage{fonttable}
-\usepackage{tracefnt}% infoshow is default; debugshow traces maths fonts, too
 \usepackage{amssymb}
 \ExplSyntaxOn
 \hook_gput_code:nnn { package/ebgaramond-maths/after } { regression-test }
@@ -26,8 +26,6 @@
   \DeclareMathSymbol{\varXi}{\mathord}{letters}{"04}
   \DeclareMathSymbol{\varUpsilon}{\mathord}{letters}{"07}
   \DeclareMathSymbol{\varPsi}{\mathord}{letters}{"09}
-  \DeclareMathSymbol{\var}{\mathord}{letters}{"}
-  \DeclareMathSymbol{\var}{\mathord}{letters}{"}
 
   \DeclareMathVersion{eb}
   \DeclareMathVersion{sb}
@@ -76,120 +74,69 @@
   % \tracingonline\thr@@
   \showoutput
   \pikfont{OT1}{EBGaramond-LF}{#3}{#4}%
-  \OMIT
   \par
   \noindent
   \begin{tabular}{llll}
     OT1 & ABC & abc & \digitstext \\
     OML & 
-  \TIMO
     $ABCDEFGHIJKLMNOPQRSTUVWXYZ$ 
-  \OMIT
     &
-  \TIMO  
     $abcdefghijklmnopqrstuvwxyz$ 
-  \OMIT
     &
-  \TIMO  
     $1234567890$ 
-  \OMIT
     \\
         & 
-  \TIMO 
         $\Gamma\varGamma\Delta\Lambda\varLambda\Xi\varXi\Pi\varPi\Sigma\varSigma\Upsilon\varUpsilon\Phi\varPhi\Psi\varPsi\Omega\varOmega$ 
-  \OMIT
     &
-  \TIMO  
     $\alpha\beta\gamma\delta\epsilon\varepsilon\zeta\eta\theta\iota\kappa\lambda\mu\nu\xi\pi\rho\varrho\sigma\varsigma\tau\upsilon\phi\varphi\chi\psi\omega$ 
-  \OMIT
     \\
         & 
-  \TIMO 
         $\mathbf{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$ 
-  \OMIT
     &
-  \TIMO  
     $\mathbf{abcdefghijklmnopqrstuvwxyz}$ 
-  \OMIT
     &
-  \TIMO  
     $\mathbf{0123456789}$ 
-  \OMIT
     \\
         & 
-  \TIMO 
         $\mathit{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$ 
-  \OMIT
     &
-  \TIMO  
     $\mathit{abcdefghijklmnopqrstuvwxyz}$ 
-  \OMIT
     &
-  \TIMO  
     $\mathit{0123456789}$ 
-  \OMIT
     \\
         & 
-  \TIMO 
         $\mathrm{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$ 
-  \OMIT
     &
-  \TIMO  
     $\mathrm{abcdefghijklmnopqrstuvwxyz}$ 
-  \OMIT
     &
-  \TIMO  
     $\mathrm{0123456789}$ 
-  \OMIT
     \\
         & 
-  \TIMO 
         $\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$ 
-  \OMIT
     &
-  \TIMO  
     $\mathcal{abcdefghijklmnopqrstuvwxyz}$ 
-  \OMIT
     &
-  \TIMO  
     $\mathcal{0123456789}$ 
-  \OMIT
     \\
   \end{tabular}
   \vfill
   \break
-  \TIMO
 }
 
 \ExplSyntaxOn
-\seq_new:N \l_ebgm_bf_seq
-\seq_new:N \l_ebgm_md_seq
-\seq_set_from_clist:Nn \l_ebgm_bf_seq
-{
-  b,
-  eb,
-  sb,
-}
-\seq_set_from_clist:Nn \l_ebgm_md_seq
-{
-  m,
-  medium,
-}
 \cs_new_protected:Npn \ebgm_test_pairs: 
 {
-  \OMIT
   \group_begin:
     \parindent=0pt
-  \TIMO
+    \tracinglostchars\thr@@
+    \showoutput
     {
       \fontencoding{OT1}\fontfamily{EBGaramond-OsF}\fontshape{n}\mdseries
       md ~ is ~ \mdseries@rm{} ~ and ~
       \bfseries
       bf ~ is ~ \bfseries@rm{} \par
     }
-    \tracinglostchars\thr@@
     \par
-    \showoutput
 
     \mathversion{normal}
     $ABC\mathbf{D}\mathit{E}\mathrm{F}GHIJKLMNOPQRSTUVWXYZ$\hfill
@@ -220,9 +167,7 @@
     $\mathcal{abcd\mathbf{e}fghijklmnopqrstuvwxyz}$\hfill
     $\mathcal{012\mathbf{3}456789}$
     \par
-  \OMIT
   \group_end:
-  \TIMO
 }
 \ExplSyntaxOff
 
