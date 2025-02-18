@@ -1,4 +1,4 @@
--- $Id: build.lua 10808 2025-02-16 20:19:35Z cfrees $
+-- $Id: build.lua 10816 2025-02-18 04:46:47Z cfrees $
 -------------------------------------------------
 -- Build configuration for ebgaramond-maths
 -------------------------------------------------
@@ -275,11 +275,11 @@ uploadconfig = {
 }
 -------------------------------------------------
 date = "2014-2025"
-if fileexists(maindir .. "/nfssext/fnt-manifest.lua") then
-  dofile(maindir .. "/nfssext/fnt-manifest.lua")
+if fileexists(maindir .. "/../nfssext/fnt-manifest.lua") then
+  dofile(maindir .. "/../nfssext/fnt-manifest.lua")
 end
-if fileexists(maindir .. "/nfssext/tag.lua") then
-  dofile(maindir .. "/nfssext/tag.lua")
+if fileexists(maindir .. "/../nfssext/tag.lua") then
+  dofile(maindir .. "/../nfssext/tag.lua")
 end
 -------------------------------------------------
 -- vim: ts=2:sw=2:tw=0:nospell:et:foldmethod=marker:
