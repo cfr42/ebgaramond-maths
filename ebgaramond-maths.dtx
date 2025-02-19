@@ -32,7 +32,7 @@
 % ref. ateb Max Chernoff: https://tex.stackexchange.com/a/723294/
 \def\MyMakePrivateLetters{\makeatletter\ExplSyntaxOn\endlinechar13}
 \ExplSyntaxOff
-\ProvidesFileSVN{$Id: ebgaramond-maths.dtx 10808 2025-02-16 20:19:35Z cfrees $}[v0.0 \revinfo][\filename: \filebase]
+\ProvidesFileSVN{$Id: ebgaramond-maths.dtx 10819 2025-02-19 05:45:52Z cfrees $}[v0.0 \revinfo][\filename: \filebase]
 \DefineFileInfoSVN[ebgaramond-maths]
 \documentclass[11pt,british]{ltxdoc}
 % l3doc loads fancyvrb
@@ -213,7 +213,9 @@
 %</driver>
 % \fi
 %
-% \changes{v1.0}{???}{First public release.}
+% \changes{v1.0}{2014-09-04}{First public release.}
+% \changes{v1.1}{2014-12-01}{Bug fix of sorts: package will now give compilation errors if missing symbols are used.}
+% \changes{v1.2}{2019-09-25}{For version 2019-05-04 of ebgaramond.}
 % ^^A lua will replace v0.0 and 0000/00/00 when tagging
 % \changes{v1.3}{2025/02/02}{Update for changes to type1 fonts.
 %   Switch to docstrip.}
@@ -243,23 +245,34 @@
 % \section{Introduction}\label{sec:intro}
 % ^^A BEGIN sec:intro
 % There is not really much to document.
-% To use EBGaramond in mathematics, you just load the package:
-% \begin{quote}
+% To use EBGaramond in mathematics, you just load the package with any \meta{options} required:
 % \iffalse
 %<*verb>
 % \fi
 \begin{verbatim}
 \usepackage[cmintegrals,cmbraces]{newtxmath}
+\usepackage[<options>]{ebgaramond-maths}
+\end{verbatim}
+% \iffalse
+%</verb>
+% \fi
+% Note that this will also load \lpack{ebgaramond} which will set your default serif font to \liningnums{EBGaramond}.
+% If for any reason you do not want this, note two things.
+% First, your document will be a typographic abomination.
+% Second, you can easily create the abomination of your choice by changing the default serif family \emph{after} loading \lpack{ebgaramond-maths}.
+%
+% \meta{options} are simply passed to \lpack{ebgaramon}, so the above code is equivalent to
+% \iffalse
+%<*verb>
+% \fi
+\begin{verbatim}
+\usepackage[cmintegrals,cmbraces]{newtxmath}
+\PassOptionsToPackage{<options>}{ebgaramond}
 \usepackage{ebgaramond-maths}
 \end{verbatim}
 % \iffalse
 %</verb>
 % \fi
-% \end{quote}
-% Note that this will also load \lpack{ebgaramond} which will set your default serif font to \liningnums{EBGaramond}.
-% If for any reason you do not want this, note two things.
-% First, your document will be a typographic abomination.
-% Second, you can easily create the abomination of your choice by changing the default serif family \emph{after} loading \lpack{ebgaramond-maths}.
 % ^^A END sec:intro
 % 
 % \section{Details}\label{sec:manylion}
@@ -286,14 +299,15 @@
 % 
 % \lpack{ebgaramond-maths} uses this new font together with support files from \lpack{ebgaramond} to set up support for mathematics as follows:
 % \begin{itemize}
-%   \item EBGaramond-Maths (medium weight) is used for \verb|letters| (standard and bold);
-%   \item EBGaramond-LF (medium weight, upright shape) is used for \verb|operators| (standard and bold);
-%   \item EBGaramond-LF (medium weight, swash shape) is used for the calligraphic alphabet, \verb|\mathcal| (medium weight);
-%   \item \verb|\mathrm|, \verb|\mathbf| and \verb|\mathit| should work as expected and use EBGaramond-LF (medium weight, upright or italic shape as appropriate).
+%   \item EBGaramond-Maths is used for \verb|letters| (standard and bold);
+%   \item EBGaramond-LF (upright shape) is used for \verb|operators| (standard and bold);
+%   \item EBGaramond-LF (swash shape) is used for the calligraphic alphabet, \verb|\mathcal| (standard and bold);
+%   \item \verb|\mathrm|, \verb|\mathbf| and \verb|\mathit| should work as expected and use EBGaramond-LF (upright, bold or italic as appropriate).
 % \end{itemize}
 % 
-% Note that \liningnums{EBGaramond} does not include a bold weight by design.
-% Following the designer's intentions, this package, like \lpack{ebgaramond}, substitutes the medium weight for bold where required.
+% Note that \liningnums{EBGaramond} did not include a bold weight by design.
+% Contrary to the designer's intentions, this package follows \lpack{ebgaramond} and provides bold where required.
+% Specifically, \lpack{ebgaramond-maths} uses whichever weight \lpack{ebgaramond} uses for \cs{mdseries} for the \texttt{normal} version of maths and whichever weight \lpack{ebgaramond} uses for \cs{bfseries} for the \texttt{bold} version.
 % ^^A  END sec:manylion
 % 
 % \section{Method}\label{sec:dull}
@@ -301,9 +315,71 @@
 % 
 % If you just wish to use the package, you do not need to read this section.
 % It explains how to create the font support files used by the package given that you have \lpack{ebgaramond} installed.
-% It assumes that you are using TeX Live on GNU/Linux or another Unix-like system such as OS X.
+%
+% As of version 1.3, \lpack{l3build} and \lpack{fontscripts} are used to generate the font files and build the package.
+% This enables the use of automated regression testing and facilitates cross-platform building.
 % 
-% \subsection{Variables}\label{subsec:var}
+% \subsection{Current Method}\label{subsec:fntbuild}
+% 
+% This is the method used to build the package as of version 1.3.
+% It used \lpack{fontscripts}, which extends and customises `\lpack{l3build}` for use in creating font-support packages.
+%
+% \subsubsection{Obtain the Code}\label{subsubsec:get-code}
+%
+% You need a copy of the code repository from either \codeberg{} or \github{}.
+% This is simplest if you have \texttt{git} installed.
+% \iffalse
+%<*verb>
+% \fi
+\begin{verbatim}
+git clone https://codeberg.org/cfr/ebgaramond-maths.git
+\end{verbatim}
+% \iffalse
+%</verb>
+% \fi
+%
+% Alternatively, you can download a \href{https://codeberg.org/cfr/ebgaramond-maths/archive/main.zip}{\texttt{zip}} or \href{https://codeberg.org/cfr/ebgaramond-maths/archive/main.tar.gz}{\texttt{tar.gz}}.
+% \codeberg{} also allows you to open a copy of the repository directly in various IDEs or to download a ‘bundle’.
+% \github{} also provides a range of options.
+%
+% \subsubsection{Build}\label{subsubsec:build}
+%
+% Unpack the archive if necessary, then change into the top-level of the repository, which should include a \file{build.lua}.
+% \iffalse
+%<*verb>
+% \fi
+\begin{verbatim}
+l3build fnttarg
+\end{verbatim}
+% \iffalse
+%</verb>
+% \fi
+% This will should generate the font support files the package requires.
+%
+% \subsubsection{Additional Steps}\label{subsubsec:add}
+%
+% Provided the previous step was successful, you should now be able to build whichever further \lpack{l3build} targets you wish.
+% For example, to run the tests and build the documentation:
+% \iffalse
+%<*verb>
+% \fi
+\begin{verbatim}
+l3build check
+l3build doc
+\end{verbatim}
+% \iffalse
+%</verb>
+% \fi
+% Note that \texttt{install} will install the package into your personal \texttt{texmf} \textsc{tds} tree.
+% This is not recommended because it greatly complicates management of \file{.map} files.
+% 
+% \subsection{Manual Method}\label{subsec:hen-ddull}
+%
+% This is the method originally used to create the package.
+% I am leaving this in the documentation because it is likely to be more useful to somebody trying to understand how to create the package than the current method, especially somebody unfamiliar with \lpack{l3build} and \lpack{fontscripts}.
+% It does, however, assume that you are using TeX Live on GNU/Linux or another Unix-like system such as OS X.
+%
+% \subsubsection{Variables}\label{subsubsec:var}
 % ^^A  BEGIN subsec:var
 % Make a working directory somewhere which I'll call \verb|${work}|.
 % The only requirement is that you have permission to write there and a (very small) amount of space.
@@ -313,7 +389,7 @@
 % On my system, that's \verb|/usr/local/texlive/YYYY| (where \verb|YYYY| is the latest version of TeX Live installed) or \verb|/usr/local/texlive/current|.
 % ^^A  END subsec:var
 % 
-% \subsection{Working environment}\label{subsec:amgylchedd}
+% \subsubsection{Working environment}\label{subsubsec:amgylchedd}
 % 
 % ^^A  BEGIN subsec:amgylchedd
 % Change to \verb|${work}|.
@@ -338,7 +414,7 @@ ln -s ${texmain}/texmf-dist/tex/fontinst/mathetx/oml.etx \
 % \end{quote}
 % ^^A  END subsec:amgylchedd
 % 
-% \subsection{Create a preliminary encoding file}\label{subsec:creu-enc}
+% \subsubsection{Create a preliminary encoding file}\label{subsubsec:creu-enc}
 % ^^A  BEGIN subsec: creu-enc
 % This is not the encoding file \TeX\ needs but it will form the basis for that file.
 % 
@@ -380,7 +456,7 @@ sed -i -e 's/TeXMathItalicEncoding/\
 % This ensures that the encoding has a distinctive (and hopefully unique) name.
 % ^^A  END subsec: creu-enc
 % 
-% \subsection{Generate the \TeX\ font}\label{subsec:tfm}
+% \subsubsection{Generate the \TeX\ font}\label{subsubsec:tfm}
 % ^^A  BEGIN subsec:tfm
 % \lpack{ebgaramond} already provides the \liningnums{type1} files needed so there is no need to regenerate those.
 % All that is required is to generate a suitable \verb|.tfm|:
@@ -418,11 +494,11 @@ otftotfm -e oml-ebgaramond.enc EBGaramond-Italic.otf \
 % \iffalse
 %<*sty>
 % \fi
-% \changes{v1.3}{2025-02-06}{Support for bold. Follow \texttt{ebgaramond} series settings.}
+% \changes{v1.3}{2025-02-06}{Support for bold. Follow \texttt{ebgaramond} series settings. Pass options to \lpack{ebgaramond}.}
 %    \begin{macrocode}
 \NeedsTeXFormat{LaTeX2e}
 \RequirePackage{svn-prov}
-\ProvidesPackageSVN[\filebase.sty]{$Id: ebgaramond-maths.dtx 10808 2025-02-16 20:19:35Z cfrees $}[v1.3 \revinfo]
+\ProvidesPackageSVN[\filebase.sty]{$Id: ebgaramond-maths.dtx 10819 2025-02-19 05:45:52Z cfrees $}[v1.3 \revinfo]
 \DefineFileInfoSVN
 %    \end{macrocode}
 % \iffalse
@@ -430,7 +506,7 @@ otftotfm -e oml-ebgaramond.enc EBGaramond-Italic.otf \
 % \fi
 %    \begin{macrocode}
 
-\RequirePackage{ebgaramond}
+\RequirePackageWithOptions{ebgaramond}
 
 \DeclareSymbolFont{letters}   {OML}   {EBGaramond-Maths} {\mdseries@rm} {it}
 \DeclareSymbolFont{operators} {OT1}   {EBGaramond-LF}    {\mdseries@rm} {n}
@@ -482,7 +558,7 @@ otftotfm -e oml-ebgaramond.enc EBGaramond-Italic.otf \
 
 %% THIS FILE SHOULD BE PUT IN A TEX INPUTS DIRECTORY
 
-\ProvidesFileSVN{$Id: ebgaramond-maths.dtx 10808 2025-02-16 20:19:35Z cfrees $}[v1.3 \revinfo][OMLEBGaramond-Maths.fd: font definitions for OML/EBGaramond-Maths.]
+\ProvidesFileSVN{$Id: ebgaramond-maths.dtx 10819 2025-02-19 05:45:52Z cfrees $}[v1.3 \revinfo][OMLEBGaramond-Maths.fd: font definitions for OML/EBGaramond-Maths.]
 
 \DeclareFontFamily{OML}{EBGaramond-Maths}{}
 
@@ -516,9 +592,8 @@ otftotfm -e oml-ebgaramond.enc EBGaramond-Italic.otf \
 \documentclass{article}
 \pdfmapfile{-EBGaramond-Maths}
 \pdfmapfile{+EBGaramond-Maths}
-\usepackage{ebgaramond}
 \usepackage[cmintegrals,cmbraces]{newtxmath}
-\usepackage{ebgaramond-maths}
+\usepackage[semibold]{ebgaramond-maths}
 
 \begin{document}
 ABCDEFGHIJKLMNOPQRSTUVWXYZ
@@ -560,6 +635,51 @@ $\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
 $\mathcal{abcdefghijklmnopqrstuvwxyz}$
 
 $\mathcal{0123456789}$
+
+{\bfseries
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+abcdefghijklmnopqrstuvwxyz
+
+1234567890}
+
+\mathversion{bold}
+
+$ABCDEFGHIJKLMNOPQRSTUVWXYZ$
+
+$abcdefghijklmnopqrstuvwxyz$
+
+$1234567890$
+
+$\Gamma\varGamma\Delta\Lambda\varLambda\Xi\varXi\Pi\varPi\Sigma\varSigma\Upsilon\varUpsilon\Phi\varPhi\Psi\varPsi\Omega\varOmega$
+
+$\alpha\beta\gamma\delta\epsilon\varepsilon\zeta\eta\theta\iota\kappa\lambda\mu\nu\xi\pi\rho\varrho\sigma\varsigma\tau\upsilon\phi\varphi\chi\psi\omega$
+
+$\mathbf{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+
+$\mathbf{abcdefghijklmnopqrstuvwxyz}$
+
+$\mathbf{0123456789}$
+
+$\mathit{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+
+$\mathit{abcdefghijklmnopqrstuvwxyz}$
+
+$\mathit{0123456789}$
+
+$\mathrm{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+
+$\mathrm{abcdefghijklmnopqrstuvwxyz}$
+
+$\mathrm{0123456789}$
+
+$\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$
+
+$\mathcal{abcdefghijklmnopqrstuvwxyz}$
+
+$\mathcal{0123456789}$
+
+\end{document}
 %    \end{macrocode}
 % \iffalse
 %</ee>

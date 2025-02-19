@@ -1,4 +1,4 @@
--- $Id: build.lua 10816 2025-02-18 04:46:47Z cfrees $
+-- $Id: build.lua 10819 2025-02-19 05:45:52Z cfrees $
 -------------------------------------------------
 -- Build configuration for ebgaramond-maths
 -------------------------------------------------
@@ -244,7 +244,7 @@ target_list[fnt.ntarg] = {
 -- }}}
 -------------------------------------------------
 textfiles = {"*.md", "*.txt"}
-typesetruns = 1
+-- typesetruns = 1
 -------------------------------------------------
 uploadconfig = {
   -- *required* --

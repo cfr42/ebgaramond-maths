@@ -4,7 +4,7 @@
 \listfiles
 \input regression-test.tex\relax
 \input fnt-regression-test-ebgaramond.tex\relax
-\ProvidesFileSVN{$Id: ebgaramond-maths-tests.lvt 10811 2025-02-17 07:20:17Z cfrees $}[v0.0 \revinfo][ebgaramond-maths regression testing]
+\ProvidesFileSVN{$Id: ebgaramond-maths-tests.lvt 10819 2025-02-19 05:45:52Z cfrees $}[v0.0 \revinfo][ebgaramond-maths regression testing]
 \setlength{\parindent}{0pt}
 \textheight=250mm
 \textwidth=160mm
@@ -15,8 +15,6 @@
 \topmargin=-10mm
 \marginparwidth=0pt
 \marginparsep=0pt
-\pdfmapfile{-EBGaramond-Maths.map}
-\pdfmapfile{+EBGaramond-Maths.map}
 \usepackage{ebgaramond-maths}
 \begin{document}
 \START
