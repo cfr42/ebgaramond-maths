@@ -1,4 +1,4 @@
--- $Id: build.lua 10820 2025-02-19 07:12:04Z cfrees $
+-- $Id: build.lua 10824 2025-02-19 19:18:02Z cfrees $
 -------------------------------------------------
 -- Build configuration for ebgaramond-maths
 -------------------------------------------------
@@ -256,7 +256,7 @@ uploadconfig = {
 	pkg        = ctanpkg,
 	summary    = "Limited support for ebgaramond in maths",
   uploader   = "Clea F. Rees",
-	version    = "v0.0",
+	version    = "v1.3",
   -- optional --
 	bugtracker = {"https://codeberg.org/cfr/ebgaramond-maths/issues"},
   -- description
@@ -275,8 +275,8 @@ uploadconfig = {
 }
 -------------------------------------------------
 date = "2014-2025"
-if fileexists(maindir .. "/../nfssext/fnt-manifest.lua") then
-  dofile(maindir .. "/../nfssext/fnt-manifest.lua")
+if fileexists(maindir .. "/../nfssext/ffnt-manifest.lua") then
+  dofile(maindir .. "/../nfssext/ffnt-manifest.lua")
 end
 if fileexists(maindir .. "/../nfssext/tag.lua") then
   dofile(maindir .. "/../nfssext/tag.lua")
