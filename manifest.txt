@@ -1,0 +1,72 @@
+# Manifest for ebgaramond-maths
+
+This file is a listing of all files considered to be part of this package.
+It is automatically generated with `l3build manifest`.
+
+
+## Source files
+
+
+### Package files
+
+
+* README.md
+* manifest.txt
+* ebgaramond-maths.dtx 
+* ebgaramond-maths.ins 
+
+### Development files
+
+* fntbuild-tables.tex
+* fnt-regression-test-ebgaramond.tex
+* fnt-testtemp-ebgaramond.lvt
+* build.lua
+* ebgaramond-maths-tests-m-eb.lvt 
+* ebgaramond-maths-tests-m-sb.lvt 
+* ebgaramond-maths-tests-medium-b.lvt 
+* ebgaramond-maths-tests-medium-eb.lvt 
+* ebgaramond-maths-tests-medium-sb.lvt 
+* ebgaramond-maths-tests.lvt 
+* ebgaramond-maths-auto-test.tlg 
+* ebgaramond-maths-tests-m-eb.tlg 
+* ebgaramond-maths-tests-m-sb.tlg 
+* ebgaramond-maths-tests-medium-b.tlg 
+* ebgaramond-maths-tests-medium-eb.tlg 
+* ebgaramond-maths-tests-medium-sb.tlg 
+* ebgaramond-maths-tests.tlg 
+
+
+## Derived files
+
+
+### Class/Package files
+
+* ebgaramond-maths.sty 
+
+### Font Encodings
+
+* oml-ebgaramond-1.enc 
+
+### Font Definitions
+
+* OMLEBGaramond-Maths.fd 
+
+### Map Files
+
+* EBGaramond-Maths.map 
+
+### TeX Font Metrics
+
+* EBGaramond-BoldItalic--oml-ebgaramond.tfm 
+* EBGaramond-ExtraBoldItalic--oml-ebgaramond.tfm 
+* EBGaramond-Italic--oml-ebgaramond.tfm 
+* EBGaramond-MediumItalic--oml-ebgaramond.tfm 
+* EBGaramond-SemiBoldItalic--oml-ebgaramond.tfm 
+
+### Typeset documentation
+
+Note that font tables are automatically generated.
+
+* ebgaramond-maths-tables.pdf 
+* ebgaramond-maths.pdf 
+* ebgaramond-example.pdf
