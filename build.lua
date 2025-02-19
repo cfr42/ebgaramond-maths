@@ -1,4 +1,4 @@
--- $Id: build.lua 10819 2025-02-19 05:45:52Z cfrees $
+-- $Id: build.lua 10820 2025-02-19 07:12:04Z cfrees $
 -------------------------------------------------
 -- Build configuration for ebgaramond-maths
 -------------------------------------------------
@@ -57,7 +57,7 @@ fnt.checksuppfiles_add = {
   "svn-prov.sty",
   "textcomp.sty",
 }
-fnt.keepfiles = {"*.enc", "*.map", "*.tfm" }
+fnt.keepfiles = {"*.enc", "*.fd", "*.map", "*.tfm" }
 fnt.mapfiles_add = { "EBGaramond.map" }
 -- non-standard test templates
 fnt.testtemp = "fnt-testtemp-ebgaramond.lvt"
