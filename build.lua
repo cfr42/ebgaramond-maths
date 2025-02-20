@@ -1,4 +1,4 @@
--- $Id: build.lua 10824 2025-02-19 19:18:02Z cfrees $
+-- $Id: build.lua 10828 2025-02-20 01:58:11Z cfrees $
 -------------------------------------------------
 -- Build configuration for ebgaramond-maths
 -------------------------------------------------
@@ -244,7 +244,7 @@ target_list[fnt.ntarg] = {
 -- }}}
 -------------------------------------------------
 textfiles = {"*.md", "*.txt"}
--- typesetruns = 1
+typesetruns = 5
 -------------------------------------------------
 uploadconfig = {
   -- *required* --
@@ -275,7 +275,9 @@ uploadconfig = {
 }
 -------------------------------------------------
 date = "2014-2025"
-if fileexists(maindir .. "/../nfssext/ffnt-manifest.lua") then
+if fileexists(maindir .. "/ffnt-manifest.lua") then
+  dofile(maindir .. "/ffnt-manifest.lua")
+elseif fileexists(maindir .. "/../nfssext/ffnt-manifest.lua") then
   dofile(maindir .. "/../nfssext/ffnt-manifest.lua")
 end
 if fileexists(maindir .. "/../nfssext/tag.lua") then
