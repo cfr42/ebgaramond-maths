@@ -1,4 +1,4 @@
--- $Id: build.lua 10828 2025-02-20 01:58:11Z cfrees $
+-- $Id: build.lua 11952 2026-06-03 19:21:24Z cfrees $
 -------------------------------------------------
 -- Build configuration for ebgaramond-maths
 -------------------------------------------------
@@ -182,7 +182,6 @@ local function fntebgm (dir,mode)
   otftotfm.opts = otftotfm.opts or ""
   local tmp = "ete.tex"
   -- set up the build environment
-  fnt.buildinit()
   assert(fnt.buildinit(), "Setting up build environment failed!")
   -- save dir and 'home'
   local gohome = abspath(".")
