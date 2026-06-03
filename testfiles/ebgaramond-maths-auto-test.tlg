@@ -128,11 +128,10 @@ LaTeX Font Info:    Using \mathgroup (8) 8 on input line ....
 LaTeX Font Info:    Restoring \mathgroup (default) on input line ....
 LaTeX Font Info:    Using \mathgroup (8) 8 on input line ....
 LaTeX Font Info:    Restoring \mathgroup (default) on input line ....
-Overfull \hbox (5.64543pt too wide) in paragraph at lines 27--27
+Overfull \hbox (5.64543pt too wide) in paragraph at lines ...
 [] 
 \hbox(44.5+39.5)x455.24408
 .\hbox(44.5+39.5)x460.88951
-..\mathon
 ..\vbox(44.5+39.5)x460.88951
 ...\hbox(8.39996+3.60004)x460.88951
 ....\glue(\tabskip) 0.0
@@ -782,7 +781,6 @@ Overfull \hbox (5.64543pt too wide) in paragraph at lines 27--27
 .....\glue 0.0 plus 1.0fil
 .....\glue 6.0
 ....\glue(\tabskip) 0.0
-..\mathoff
 .\penalty 10000
 .\glue(\parfillskip) 0.0 plus 1.0fil
 .\glue(\rightskip) 0.0
@@ -799,7 +797,7 @@ Completed box being shipped out [1]
 ....\hbox(0.0+0.0)x455.24408
 ..\glue 0.0
 ..\glue(\lineskip) 0.0
-..\vbox(711.3189+0.0)x455.24408, glue set 615.6989fill
+..\vbox(711.3189+0.0)x455.24408, glue set 620.6989fill
 ...\write-{}
 ...\glue(\topskip) 3.00002
 ...\hbox(6.99998+0.62)x455.24408, glue set 308.36137fil
@@ -848,7 +846,6 @@ Completed box being shipped out [1]
 ...\glue(\lineskip) 1.0
 ...\hbox(44.5+39.5)x455.24408
 ....\hbox(44.5+39.5)x460.88951
-.....\mathon
 .....\vbox(44.5+39.5)x460.88951
 ......\hbox(8.39996+3.60004)x460.88951
 .......\glue(\tabskip) 0.0
@@ -1498,10 +1495,10 @@ Completed box being shipped out [1]
 ........\glue 0.0 plus 1.0fil
 ........\glue 6.0
 .......\glue(\tabskip) 0.0
-.....\mathoff
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0 plus 1.0fil
 ....\glue(\rightskip) 0.0
+...\glue -5.0
 ...\glue 0.0 plus 1.0fill
 ...\glue 0.0
 ...\glue 0.0 plus 0.0001fil
@@ -1620,11 +1617,10 @@ LaTeX Font Info:    Using \mathgroup (8) 8 on input line ....
 LaTeX Font Info:    Restoring \mathgroup (default) on input line ....
 LaTeX Font Info:    Using \mathgroup (8) 8 on input line ....
 LaTeX Font Info:    Restoring \mathgroup (default) on input line ....
-Overfull \hbox (22.33553pt too wide) in paragraph at lines 30--30
+Overfull \hbox (22.33553pt too wide) in paragraph at lines ...
 [] 
 \hbox(44.5+39.5)x455.24408
 .\hbox(44.5+39.5)x477.5796
-..\mathon
 ..\vbox(44.5+39.5)x477.5796
 ...\hbox(8.39996+3.60004)x477.5796
 ....\glue(\tabskip) 0.0
@@ -2293,7 +2289,6 @@ Overfull \hbox (22.33553pt too wide) in paragraph at lines 30--30
 .....\glue 0.0 plus 1.0fil
 .....\glue 6.0
 ....\glue(\tabskip) 0.0
-..\mathoff
 .\penalty 10000
 .\glue(\parfillskip) 0.0 plus 1.0fil
 .\glue(\rightskip) 0.0
@@ -2310,7 +2305,7 @@ Completed box being shipped out [2]
 ....\hbox(0.0+0.0)x455.24408
 ..\glue 0.0
 ..\glue(\lineskip) 0.0
-..\vbox(711.3189+0.0)x455.24408, glue set 615.6989fill
+..\vbox(711.3189+0.0)x455.24408, glue set 620.6989fill
 ...\glue(\topskip) 2.99
 ...\hbox(7.01+0.62)x455.24408, glue set 300.34926fil
 ....\hbox(0.0+0.0)x0.0
@@ -2359,7 +2354,6 @@ Completed box being shipped out [2]
 ...\glue(\lineskip) 1.0
 ...\hbox(44.5+39.5)x455.24408
 ....\hbox(44.5+39.5)x477.5796
-.....\mathon
 .....\vbox(44.5+39.5)x477.5796
 ......\hbox(8.39996+3.60004)x477.5796
 .......\glue(\tabskip) 0.0
@@ -3028,10 +3022,10 @@ Completed box being shipped out [2]
 ........\glue 0.0 plus 1.0fil
 ........\glue 6.0
 .......\glue(\tabskip) 0.0
-.....\mathoff
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0 plus 1.0fil
 ....\glue(\rightskip) 0.0
+...\glue -5.0
 ...\glue 0.0 plus 1.0fill
 ...\glue 0.0
 ...\glue 0.0 plus 0.0001fil
@@ -3143,11 +3137,10 @@ LaTeX Font Info:    Using \mathgroup (8) 8 on input line ....
 LaTeX Font Info:    Restoring \mathgroup (default) on input line ....
 LaTeX Font Info:    Using \mathgroup (8) 8 on input line ....
 LaTeX Font Info:    Restoring \mathgroup (default) on input line ....
-Overfull \hbox (33.63544pt too wide) in paragraph at lines 33--33
+Overfull \hbox (33.63544pt too wide) in paragraph at lines ...
 [] 
 \hbox(44.5+39.5)x455.24408
 .\hbox(44.5+39.5)x488.87952
-..\mathon
 ..\vbox(44.5+39.5)x488.87952
 ...\hbox(8.39996+3.60004)x488.87952
 ....\glue(\tabskip) 0.0
@@ -3816,7 +3809,6 @@ Overfull \hbox (33.63544pt too wide) in paragraph at lines 33--33
 .....\glue 0.0 plus 1.0fil
 .....\glue 6.0
 ....\glue(\tabskip) 0.0
-..\mathoff
 .\penalty 10000
 .\glue(\parfillskip) 0.0 plus 1.0fil
 .\glue(\rightskip) 0.0
@@ -3833,7 +3825,7 @@ Completed box being shipped out [3]
 ....\hbox(0.0+0.0)x455.24408
 ..\glue 0.0
 ..\glue(\lineskip) 0.0
-..\vbox(711.3189+0.0)x455.24408, glue set 615.6989fill
+..\vbox(711.3189+0.0)x455.24408, glue set 620.6989fill
 ...\glue(\topskip) 2.98001
 ...\hbox(7.01999+0.62)x455.24408, glue set 300.2993fil
 ....\hbox(0.0+0.0)x0.0
@@ -3881,7 +3873,6 @@ Completed box being shipped out [3]
 ...\glue(\lineskip) 1.0
 ...\hbox(44.5+39.5)x455.24408
 ....\hbox(44.5+39.5)x488.87952
-.....\mathon
 .....\vbox(44.5+39.5)x488.87952
 ......\hbox(8.39996+3.60004)x488.87952
 .......\glue(\tabskip) 0.0
@@ -4550,10 +4541,10 @@ Completed box being shipped out [3]
 ........\glue 0.0 plus 1.0fil
 ........\glue 6.0
 .......\glue(\tabskip) 0.0
-.....\mathoff
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0 plus 1.0fil
 ....\glue(\rightskip) 0.0
+...\glue -5.0
 ...\glue 0.0 plus 1.0fill
 ...\glue 0.0
 ...\glue 0.0 plus 0.0001fil
@@ -4671,11 +4662,10 @@ LaTeX Font Info:    Using \mathgroup (8) 8 on input line ....
 LaTeX Font Info:    Restoring \mathgroup (default) on input line ....
 LaTeX Font Info:    Using \mathgroup (8) 8 on input line ....
 LaTeX Font Info:    Restoring \mathgroup (default) on input line ....
-Overfull \hbox (41.11562pt too wide) in paragraph at lines 36--36
+Overfull \hbox (41.11562pt too wide) in paragraph at lines ...
 [] 
 \hbox(44.5+39.5)x455.24408
 .\hbox(44.5+39.5)x496.3597
-..\mathon
 ..\vbox(44.5+39.5)x496.3597
 ...\hbox(8.39996+3.60004)x496.3597
 ....\glue(\tabskip) 0.0
@@ -5338,7 +5328,6 @@ Overfull \hbox (41.11562pt too wide) in paragraph at lines 36--36
 .....\glue 0.0 plus 1.0fil
 .....\glue 6.0
 ....\glue(\tabskip) 0.0
-..\mathoff
 .\penalty 10000
 .\glue(\parfillskip) 0.0 plus 1.0fil
 .\glue(\rightskip) 0.0
@@ -5355,7 +5344,7 @@ Completed box being shipped out [4]
 ....\hbox(0.0+0.0)x455.24408
 ..\glue 0.0
 ..\glue(\lineskip) 0.0
-..\vbox(711.3189+0.0)x455.24408, glue set 615.7389fill
+..\vbox(711.3189+0.0)x455.24408, glue set 620.7389fill
 ...\glue(\topskip) 2.94002
 ...\hbox(7.05998+0.57999)x455.24408, glue set 293.89636fil
 ....\hbox(0.0+0.0)x0.0
@@ -5405,7 +5394,6 @@ Completed box being shipped out [4]
 ...\glue(\lineskip) 1.0
 ...\hbox(44.5+39.5)x455.24408
 ....\hbox(44.5+39.5)x496.3597
-.....\mathon
 .....\vbox(44.5+39.5)x496.3597
 ......\hbox(8.39996+3.60004)x496.3597
 .......\glue(\tabskip) 0.0
@@ -6068,10 +6056,10 @@ Completed box being shipped out [4]
 ........\glue 0.0 plus 1.0fil
 ........\glue 6.0
 .......\glue(\tabskip) 0.0
-.....\mathoff
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0 plus 1.0fil
 ....\glue(\rightskip) 0.0
+...\glue -5.0
 ...\glue 0.0 plus 1.0fill
 ...\glue 0.0
 ...\glue 0.0 plus 0.0001fil
@@ -6189,11 +6177,10 @@ LaTeX Font Info:    Using \mathgroup (8) 8 on input line ....
 LaTeX Font Info:    Restoring \mathgroup (default) on input line ....
 LaTeX Font Info:    Using \mathgroup (8) 8 on input line ....
 LaTeX Font Info:    Restoring \mathgroup (default) on input line ....
-Overfull \hbox (13.74544pt too wide) in paragraph at lines 39--39
+Overfull \hbox (13.74544pt too wide) in paragraph at lines ...
 [] 
 \hbox(44.5+39.5)x455.24408
 .\hbox(44.5+39.5)x468.98952
-..\mathon
 ..\vbox(44.5+39.5)x468.98952
 ...\hbox(8.39996+3.60004)x468.98952
 ....\glue(\tabskip) 0.0
@@ -6862,7 +6849,6 @@ Overfull \hbox (13.74544pt too wide) in paragraph at lines 39--39
 .....\glue 0.0 plus 1.0fil
 .....\glue 6.0
 ....\glue(\tabskip) 0.0
-..\mathoff
 .\penalty 10000
 .\glue(\parfillskip) 0.0 plus 1.0fil
 .\glue(\rightskip) 0.0
@@ -6879,7 +6865,7 @@ Completed box being shipped out [5]
 ....\hbox(0.0+0.0)x455.24408
 ..\glue 0.0
 ..\glue(\lineskip) 0.0
-..\vbox(711.3189+0.0)x455.24408, glue set 615.6989fill
+..\vbox(711.3189+0.0)x455.24408, glue set 620.6989fill
 ...\glue(\topskip) 3.01501
 ...\hbox(6.98499+0.62)x455.24408, glue set 279.55942fil
 ....\hbox(0.0+0.0)x0.0
@@ -6933,7 +6919,6 @@ Completed box being shipped out [5]
 ...\glue(\lineskip) 1.0
 ...\hbox(44.5+39.5)x455.24408
 ....\hbox(44.5+39.5)x468.98952
-.....\mathon
 .....\vbox(44.5+39.5)x468.98952
 ......\hbox(8.39996+3.60004)x468.98952
 .......\glue(\tabskip) 0.0
@@ -7602,10 +7587,10 @@ Completed box being shipped out [5]
 ........\glue 0.0 plus 1.0fil
 ........\glue 6.0
 .......\glue(\tabskip) 0.0
-.....\mathoff
 ....\penalty 10000
 ....\glue(\parfillskip) 0.0 plus 1.0fil
 ....\glue(\rightskip) 0.0
+...\glue -5.0
 ...\glue 0.0 plus 1.0fill
 ...\glue 0.0
 ...\glue 0.0 plus 0.0001fil
